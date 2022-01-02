@@ -43,6 +43,8 @@ namespace SKFB_ISZR
             this.chooseMenu = new System.Windows.Forms.Label();
             this.helpdeskButton = new System.Windows.Forms.Button();
             this.sideBackground = new System.Windows.Forms.Panel();
+            this.noPINAlertText = new System.Windows.Forms.Label();
+            this.noPINAlertBox = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // closeButton
@@ -264,6 +266,32 @@ namespace SKFB_ISZR
             this.sideBackground.Size = new System.Drawing.Size(299, 810);
             this.sideBackground.TabIndex = 35;
             // 
+            // noPINAlertText
+            // 
+            this.noPINAlertText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(79)))), ((int)(((byte)(101)))));
+            this.noPINAlertText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noPINAlertText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.noPINAlertText.Location = new System.Drawing.Point(468, 704);
+            this.noPINAlertText.Name = "noPINAlertText";
+            this.noPINAlertText.Size = new System.Drawing.Size(799, 30);
+            this.noPINAlertText.TabIndex = 10;
+            this.noPINAlertText.Text = "  Jelenleg nincs igényelhető PIN kód külső telefonáláshoz.";
+            this.noPINAlertText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.noPINAlertText.Visible = false;
+            // 
+            // noPINAlertBox
+            // 
+            this.noPINAlertBox.BackColor = System.Drawing.Color.Maroon;
+            this.noPINAlertBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noPINAlertBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.noPINAlertBox.Location = new System.Drawing.Point(432, 704);
+            this.noPINAlertBox.Name = "noPINAlertBox";
+            this.noPINAlertBox.Size = new System.Drawing.Size(30, 30);
+            this.noPINAlertBox.TabIndex = 10;
+            this.noPINAlertBox.Text = "!!!";
+            this.noPINAlertBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.noPINAlertBox.Visible = false;
+            // 
             // MainDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,6 +302,8 @@ namespace SKFB_ISZR
             this.ClientSize = new System.Drawing.Size(1400, 800);
             this.Controls.Add(this.sideBackground);
             this.Controls.Add(this.downButton);
+            this.Controls.Add(this.noPINAlertBox);
+            this.Controls.Add(this.noPINAlertText);
             this.Controls.Add(this.chooseMenu);
             this.Controls.Add(this.welcomeText);
             this.Controls.Add(this.closeButton);
@@ -315,5 +345,7 @@ namespace SKFB_ISZR
         private System.Windows.Forms.Label chooseMenu;
         private System.Windows.Forms.Button helpdeskButton;
         private System.Windows.Forms.Panel sideBackground;
+        private System.Windows.Forms.Label noPINAlertText;
+        private System.Windows.Forms.Label noPINAlertBox;
     }
 }

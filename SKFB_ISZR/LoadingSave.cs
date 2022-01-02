@@ -58,7 +58,9 @@ namespace SKFB_ISZR
         // Fájl mentés felületének bezárása
         private void BackToSummery(object sender, EventArgs e)
         {
-            parentForm.Show();
+            MainDashboard dashboard = new MainDashboard();
+            dashboard.Show();
+            parentForm.Close();
             Dispose();
         }
 

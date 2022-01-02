@@ -124,7 +124,7 @@ namespace SKFB_ISZR
             checkNTGText.Text = ntgText.Text;
 
             // Elérhető PINek betöltése a fájlból
-            System.IO.StreamReader availablePINsFile = new System.IO.StreamReader(availablePINsLocation);
+            StreamReader availablePINsFile = new StreamReader(availablePINsLocation);
             availablePINs = availablePINsFile.ReadToEnd();
             availablePINsFile.Close();
 

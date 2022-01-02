@@ -32,40 +32,12 @@ namespace SKFB_ISZR
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoadingSplashScreen));
             this.loadingTimer = new System.Windows.Forms.Timer(this.components);
-            this.version = new System.Windows.Forms.Label();
-            this.versionDate = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // loadingTimer
             // 
-            this.loadingTimer.Interval = 3000;
+            this.loadingTimer.Interval = 1000;
             this.loadingTimer.Tick += new System.EventHandler(this.Timer_Tick);
-            // 
-            // version
-            // 
-            this.version.AutoSize = true;
-            this.version.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(79)))), ((int)(((byte)(101)))));
-            this.version.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.version.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.version.Location = new System.Drawing.Point(10, 330);
-            this.version.Name = "version";
-            this.version.Size = new System.Drawing.Size(123, 25);
-            this.version.TabIndex = 12;
-            this.version.Text = "Verzió 1.2.1.0";
-            this.version.UseWaitCursor = true;
-            // 
-            // versionDate
-            // 
-            this.versionDate.AutoSize = true;
-            this.versionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(79)))), ((int)(((byte)(101)))));
-            this.versionDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.versionDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.versionDate.Location = new System.Drawing.Point(10, 355);
-            this.versionDate.Name = "versionDate";
-            this.versionDate.Size = new System.Drawing.Size(88, 21);
-            this.versionDate.TabIndex = 11;
-            this.versionDate.Text = "2022.01.01";
-            this.versionDate.UseWaitCursor = true;
             // 
             // LoadingSplashScreen
             // 
@@ -75,8 +47,6 @@ namespace SKFB_ISZR
             this.BackgroundImage = global::SKFB_ISZR.Properties.Resources.loadingScreen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(946, 390);
-            this.Controls.Add(this.versionDate);
-            this.Controls.Add(this.version);
             this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -92,13 +62,11 @@ namespace SKFB_ISZR
             this.Load += new System.EventHandler(this.LoadingScreen_Load);
             this.Shown += new System.EventHandler(this.LoadingSplashScreen_Shown);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
+
         private System.Windows.Forms.Timer loadingTimer;
-        private System.Windows.Forms.Label version;
-        private System.Windows.Forms.Label versionDate;
     }
 }

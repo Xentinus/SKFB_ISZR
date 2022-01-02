@@ -66,6 +66,7 @@ namespace SKFB_ISZR
             this.stepText2 = new System.Windows.Forms.Label();
             this.step01 = new System.Windows.Forms.GroupBox();
             this.choseUserType = new System.Windows.Forms.Label();
+            this.newSzakteruletButton = new System.Windows.Forms.Button();
             this.oldUserType = new System.Windows.Forms.Button();
             this.newUserType = new System.Windows.Forms.Button();
             this.step03PermissionList = new System.Windows.Forms.GroupBox();
@@ -106,7 +107,6 @@ namespace SKFB_ISZR
             this.defaultPrinterYes = new System.Windows.Forms.Button();
             this.defaultPermissionsList = new System.Windows.Forms.CheckedListBox();
             this.savePDF = new System.Windows.Forms.SaveFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.colorBg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sidemenuBackground)).BeginInit();
             this.step02.SuspendLayout();
@@ -571,7 +571,7 @@ namespace SKFB_ISZR
             // 
             this.step01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
             this.step01.Controls.Add(this.choseUserType);
-            this.step01.Controls.Add(this.button1);
+            this.step01.Controls.Add(this.newSzakteruletButton);
             this.step01.Controls.Add(this.oldUserType);
             this.step01.Controls.Add(this.newUserType);
             this.step01.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
@@ -594,6 +594,21 @@ namespace SKFB_ISZR
             this.choseUserType.Size = new System.Drawing.Size(342, 37);
             this.choseUserType.TabIndex = 45;
             this.choseUserType.Text = "Válassz felhasználó típust";
+            // 
+            // newSzakteruletButton
+            // 
+            this.newSzakteruletButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(79)))), ((int)(((byte)(101)))));
+            this.newSzakteruletButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.newSzakteruletButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newSzakteruletButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.newSzakteruletButton.ForeColor = System.Drawing.Color.White;
+            this.newSzakteruletButton.Location = new System.Drawing.Point(168, 377);
+            this.newSzakteruletButton.Name = "newSzakteruletButton";
+            this.newSzakteruletButton.Size = new System.Drawing.Size(708, 40);
+            this.newSzakteruletButton.TabIndex = 2;
+            this.newSzakteruletButton.Text = "Meglévő felhasználó új szakterületének jogosulságainak igénylése";
+            this.newSzakteruletButton.UseVisualStyleBackColor = false;
+            this.newSzakteruletButton.Click += new System.EventHandler(this.OldUserNewSzakterulet_Click);
             // 
             // oldUserType
             // 
@@ -1627,24 +1642,8 @@ namespace SKFB_ISZR
             // savePDF
             // 
             this.savePDF.DefaultExt = "pdf";
-            this.savePDF.FileName = "kellnerBela";
             this.savePDF.Filter = "PDF fájlok|*.pdf";
-            this.savePDF.Title = "Kamera jogosultágot igénylő szolgálati jegy PDF-ének mentése";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(79)))), ((int)(((byte)(101)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(168, 377);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(708, 40);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Meglévő felhasználó új szakterületének jogosulságainak igénylése";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.OldUserNewSzakterulet_Click);
+            this.savePDF.Title = "Windows jogosultágot igénylő szolgálati jegy PDF-ének mentése";
             // 
             // WindowsPermissions
             // 
@@ -1779,6 +1778,6 @@ namespace SKFB_ISZR
         private System.Windows.Forms.Label checkLastName;
         private System.Windows.Forms.Label checkSpecialty;
         private System.Windows.Forms.SaveFileDialog savePDF;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button newSzakteruletButton;
     }
 }

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -39,6 +41,9 @@ namespace SKFB_ISZR
 
             // Felhasználó üdvözlése a nevén
             welcomeText.Text += $"{LoadingSplashScreen.userFullName}!";
+
+            // Szabad NTG számok megszámolása, és gomb beállítása
+            CheckSetNTG_Button();
         }
 
         // Felület betöltése
@@ -107,6 +112,13 @@ namespace SKFB_ISZR
             CameraRecord kameraKep = new CameraRecord();
             kameraKep.Show();
             Dispose();
+        }
+        private void CheckSetNTG_Button()
+        {
+            var lineCount = File.ReadLines(AppDomain.CurrentDomain.BaseDirectory + "Database\\AvailablePINs.txt").Count();
+            phoneButton.Enabled = lineCount > 1;
+            noPINAlertBox.Visible = !phoneButton.Enabled;
+            noPINAlertText.Visible = !phoneButton.Enabled;
         }
     }
 }

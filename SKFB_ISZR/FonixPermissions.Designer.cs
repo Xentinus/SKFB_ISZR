@@ -81,8 +81,6 @@ namespace SKFB_ISZR
             this.checkInstitute = new System.Windows.Forms.Label();
             this.checkChooseSpecialtyText = new System.Windows.Forms.Label();
             this.checkChooseSpecialty = new System.Windows.Forms.Label();
-            this.checkUserTypeText = new System.Windows.Forms.Label();
-            this.checkUserType = new System.Windows.Forms.Label();
             this.createButton = new System.Windows.Forms.Button();
             this.checkRankText = new System.Windows.Forms.Label();
             this.checkRank = new System.Windows.Forms.Label();
@@ -886,8 +884,6 @@ namespace SKFB_ISZR
             this.stepFinal.Controls.Add(this.checkInstitute);
             this.stepFinal.Controls.Add(this.checkChooseSpecialtyText);
             this.stepFinal.Controls.Add(this.checkChooseSpecialty);
-            this.stepFinal.Controls.Add(this.checkUserTypeText);
-            this.stepFinal.Controls.Add(this.checkUserType);
             this.stepFinal.Controls.Add(this.createButton);
             this.stepFinal.Controls.Add(this.checkRankText);
             this.stepFinal.Controls.Add(this.checkRank);
@@ -999,27 +995,6 @@ namespace SKFB_ISZR
             this.checkChooseSpecialty.Size = new System.Drawing.Size(108, 21);
             this.checkChooseSpecialty.TabIndex = 25;
             this.checkChooseSpecialty.Text = "Szakterületek";
-            // 
-            // checkUserTypeText
-            // 
-            this.checkUserTypeText.AutoSize = true;
-            this.checkUserTypeText.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.checkUserTypeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(79)))), ((int)(((byte)(101)))));
-            this.checkUserTypeText.Location = new System.Drawing.Point(209, 323);
-            this.checkUserTypeText.Name = "checkUserTypeText";
-            this.checkUserTypeText.Size = new System.Drawing.Size(130, 21);
-            this.checkUserTypeText.TabIndex = 22;
-            this.checkUserTypeText.Text = "Jogosultság típus";
-            // 
-            // checkUserType
-            // 
-            this.checkUserType.AutoSize = true;
-            this.checkUserType.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.checkUserType.Location = new System.Drawing.Point(58, 323);
-            this.checkUserType.Name = "checkUserType";
-            this.checkUserType.Size = new System.Drawing.Size(137, 21);
-            this.checkUserType.TabIndex = 23;
-            this.checkUserType.Text = "Jogosultság típus";
             // 
             // createButton
             // 
@@ -1239,9 +1214,9 @@ namespace SKFB_ISZR
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1400, 800);
             this.Controls.Add(this.stepUserData);
+            this.Controls.Add(this.stepFonix01);
             this.Controls.Add(this.stepFinal);
             this.Controls.Add(this.stepFonix02);
-            this.Controls.Add(this.stepFonix01);
             this.Controls.Add(this.checkTextEnable4);
             this.Controls.Add(this.stepText4);
             this.Controls.Add(this.checkTextEnable3);
@@ -1325,8 +1300,6 @@ namespace SKFB_ISZR
         private System.Windows.Forms.GroupBox stepFinal;
         private System.Windows.Forms.Label checkChooseSpecialtyText;
         private System.Windows.Forms.Label checkChooseSpecialty;
-        private System.Windows.Forms.Label checkUserTypeText;
-        private System.Windows.Forms.Label checkUserType;
         private System.Windows.Forms.Button createButton;
         private System.Windows.Forms.Label checkRankText;
         private System.Windows.Forms.Label checkRank;

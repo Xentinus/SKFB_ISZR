@@ -109,7 +109,7 @@ namespace SKFB_ISZR
             checkLastNameText.Text = lastNameText.Text;
             checkFirstNameText.Text = firstNameText.Text;
             checkRankText.Text = rankText.Text;
-            checkUsernameText.Text = usernameText.Text;
+            checkUsernameText.Text = usernameText.Text.Length > 0 ? usernameText.Text : "-";
             checkSpecialtyText.Text = specialtyText.Text;
             checkPostText.Text = postText.Text;
             checkOfficeText.Text = officeText.Text;

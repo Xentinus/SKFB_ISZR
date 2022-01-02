@@ -196,7 +196,7 @@ namespace SKFB_ISZR
             if (!String.IsNullOrWhiteSpace(cameraName10.Text)) AddCameraToRecordTable(recordTable.Rows.Count, cameraName10.Text, recordTimeStart10.Text, recordTimeEnd10.Text);
 
             // Adatok ellenőrzése, ha minden megfelelő PDF készítés engedélyezése, ellenkező esetben hiba megjelenítése
-            createButton.Enabled = SummaryChecker.CheckDatas(lastNameText.Text, firstNameText.Text, rankText.Text, specialtyText.Text, postText.Text, officeText.Text, ntgText.Text) && recordTable.Rows.Count > 0 && GoodRecordDates;
+            createButton.Enabled = SummaryChecker.CheckDatas(lastNameText.Text, firstNameText.Text, rankText.Text, specialtyText.Text, postText.Text, officeText.Text, ntgText.Text, recordReasonText.Text) && recordTable.Rows.Count > 0 && GoodRecordDates;
             errorText.Visible = !createButton.Enabled;
             errorPicture.Visible = !createButton.Enabled;
         }

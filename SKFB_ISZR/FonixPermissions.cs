@@ -9,9 +9,6 @@ namespace SKFB_ISZR
         // Lépésszámláló
         public static int stepCounter;
 
-        // Új user vagy régi?
-        public static bool newUser = true;
-
         // Lekerekített sarok
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
@@ -79,30 +76,6 @@ namespace SKFB_ISZR
             SetupStepGroup();
         }
 
-        // Új felhasználó esetén
-        private void NewUserButton_Click(object sender, EventArgs e)
-        {
-            if (!newUser)
-            {
-                newUser = true;
-                usernameText.Text = "";
-            }
-            stepCounter++;
-            SetupStepGroup();
-        }
-
-        // Meglévő felhasználó esetén
-        private void OldUserButton_Click(object sender, EventArgs e)
-        {
-            if (newUser)
-            {
-                newUser = false;
-                usernameText.Text = "";
-            }
-            stepCounter++;
-            SetupStepGroup();
-        }
-
         // Az aktuális lépés megjelenítése
         private void SetupStepGroup()
         {
@@ -155,14 +128,11 @@ namespace SKFB_ISZR
             checkLastNameText.Text = lastNameText.Text;
             checkFirstNameText.Text = firstNameText.Text;
             checkRankText.Text = rankText.Text;
-            checkUsernameText.Text = newUser ? "-" : usernameText.Text;
+            checkUsernameText.Text = usernameText.Text.Length > 0 ? usernameText.Text : "-";
             checkSpecialtyText.Text = specialtyText.Text;
             checkPostText.Text = postText.Text;
             checkOfficeText.Text = officeText.Text;
             checkNTGText.Text = ntgText.Text;
-
-            // Jogosultság
-            checkUserTypeText.Text = newUser ? "Új felhasználó" : "Meglévő felhasználó számára többletjogosultság";
 
             // Szakterületek
             checkChooseSpecialtyText.Text = "";
@@ -228,7 +198,6 @@ namespace SKFB_ISZR
             DocumentEditor.ntg = checkNTGText.Text;
 
             // Szolgáltatás alapú
-            DocumentEditor.permissionType = checkUserTypeText.Text;
             DocumentEditor.specialitys = checkChooseSpecialtyText.Text;
             DocumentEditor.localPermissions = checkLocalPermissions.Text;
             DocumentEditor.nationPermissions = checkNationPermissions.Text;
