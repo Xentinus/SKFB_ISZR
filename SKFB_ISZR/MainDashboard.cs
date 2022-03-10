@@ -56,7 +56,7 @@ namespace SKFB_ISZR
         private void MinimizeButton_Click(object sender, EventArgs e) => WindowState = FormWindowState.Minimized;
 
         // Programmal kapcsolatos segítségek mappa megnyítása
-        private void HelpdeskButton_Click(object sender, EventArgs e) => System.Diagnostics.Process.Start("explorer.exe", "\\\\skfb-file01\\Org\\Informatika\\Publikus\\ISZR");
+        private void HelpdeskButton_Click(object sender, EventArgs e) => System.Diagnostics.Process.Start("explorer.exe", "\\\\skfb-file03\\Org\\Informatika\\Publikus\\ISZR");
 
         // Parkolási kártyát igénylő folyamat megnyítása
         private void RequestParkingCardButton_Click(object sender, EventArgs e)
