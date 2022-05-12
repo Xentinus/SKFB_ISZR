@@ -165,7 +165,7 @@ namespace SKFB_ISZR
             }
 
             // Adatok ellenőrzése, ha minden megfelelő PDF készítés engedélyezése, ellenkező esetben hiba megjelenítése
-            createButton.Enabled = SummaryChecker.CheckDatas(lastNameText.Text, firstNameText.Text, rankText.Text, specialtyText.Text, postText.Text, officeText.Text, ntgText.Text) && specialtyCount > 0 && instituteCount > 0 && nationalCount > 0;
+            createButton.Enabled = SummaryChecker.CheckDatas(lastNameText.Text, firstNameText.Text, rankText.Text, specialtyText.Text, postText.Text, officeText.Text, ntgText.Text) && specialtyCount > 0 && (instituteCount > 0 || nationalCount > 0);
             errorText.Visible = !createButton.Enabled;
             errorPicture.Visible = !createButton.Enabled;
         }

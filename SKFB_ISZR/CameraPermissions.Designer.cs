@@ -1037,8 +1037,8 @@ namespace SKFB_ISZR
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1400, 800);
             this.Controls.Add(this.step01);
-            this.Controls.Add(this.step03);
             this.Controls.Add(this.step02);
+            this.Controls.Add(this.step03);
             this.Controls.Add(this.nextButton);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.mainMenu);

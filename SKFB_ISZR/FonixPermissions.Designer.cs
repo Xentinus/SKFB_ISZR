@@ -800,7 +800,7 @@ namespace SKFB_ISZR
             "Kényszerítő eszköz",
             "Kérelem végrehajtások",
             "Kérelmek",
-            "Kioszk",
+            "KIOSZK",
             "Körletellátás",
             "Központi nyilvántartó",
             "Szabálysétési eljárások",
@@ -808,10 +808,11 @@ namespace SKFB_ISZR
             "Távozások, távollétek",
             "Távozások, visszatérések nyugtázása",
             "Törzsadatok",
-            "Fénykép és kártyakezelő",
-            "Ideiglenes befogadó",
-            "BNY Vezető",
-            "Távollét nyugtázó"});
+            "Büntetések, Kényszerintézkedések",
+            "Értesítések, Kihirdetések",
+            "Választás és Népszavazás 2022",
+            "EMA",
+            "Pszich. Vélemény"});
             this.nationalText.Location = new System.Drawing.Point(32, 384);
             this.nationalText.MultiColumn = true;
             this.nationalText.Name = "nationalText";
@@ -855,7 +856,7 @@ namespace SKFB_ISZR
             "Kényszerítő eszköz",
             "Kérelem végrehajtások",
             "Kérelmek",
-            "Kioszk",
+            "KIOSZK",
             "Körletellátás",
             "Központi nyilvántartó",
             "Szabálysétési eljárások",
@@ -866,7 +867,13 @@ namespace SKFB_ISZR
             "Fénykép és kártyakezelő",
             "Ideiglenes befogadó",
             "BNY Vezető",
-            "Távollét nyugtázó"});
+            "Távollét nyugtázó",
+            "Büntetések, Kényszerintézkedések",
+            "Értesítések, Kihirdetések",
+            "Választás és Népszavazás 2022",
+            "EMA",
+            "MMA",
+            "Pszich. Vélemény"});
             this.instituteText.Location = new System.Drawing.Point(32, 65);
             this.instituteText.MultiColumn = true;
             this.instituteText.Name = "instituteText";
@@ -1214,9 +1221,9 @@ namespace SKFB_ISZR
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1400, 800);
             this.Controls.Add(this.stepUserData);
+            this.Controls.Add(this.stepFonix02);
             this.Controls.Add(this.stepFonix01);
             this.Controls.Add(this.stepFinal);
-            this.Controls.Add(this.stepFonix02);
             this.Controls.Add(this.checkTextEnable4);
             this.Controls.Add(this.stepText4);
             this.Controls.Add(this.checkTextEnable3);
