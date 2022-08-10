@@ -2,6 +2,8 @@
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
+using SKFB_ISZR.Tools;
+using SKFB_ISZR.Tools.Permissions;
 
 namespace SKFB_ISZR
 {

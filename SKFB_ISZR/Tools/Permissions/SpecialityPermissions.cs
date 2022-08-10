@@ -1,4 +1,4 @@
-﻿namespace SKFB_ISZR
+﻿namespace SKFB_ISZR.Tools.Permissions
 {
     internal class SpecialityPermissions
     {

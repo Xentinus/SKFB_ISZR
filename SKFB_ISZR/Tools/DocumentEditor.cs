@@ -4,7 +4,7 @@ using System.Reflection;
 
 using Word = Microsoft.Office.Interop.Word;
 
-namespace SKFB_ISZR
+namespace SKFB_ISZR.Tools
 {
     internal class DocumentEditor
     {
@@ -16,66 +16,66 @@ namespace SKFB_ISZR
         private static readonly object isVisible = false;
 
         // Felhasználó alap adatai
-        public static string lastName = String.Empty;
+        public static string lastName = string.Empty;
 
-        public static string firstName = String.Empty;
-        public static string rank = String.Empty;
-        public static string username = String.Empty;
-        public static string specialty = String.Empty;
-        public static string post = String.Empty;
-        public static string office = String.Empty;
-        public static string ntg = String.Empty;
+        public static string firstName = string.Empty;
+        public static string rank = string.Empty;
+        public static string username = string.Empty;
+        public static string specialty = string.Empty;
+        public static string post = string.Empty;
+        public static string office = string.Empty;
+        public static string ntg = string.Empty;
 
         // Kamera jogosultság igényléséhez
-        public static string generatedUsername = String.Empty;
+        public static string generatedUsername = string.Empty;
 
         // Kamera jgoosultság és Windows jogosultság igényléséhez
-        public static string permissionType = String.Empty;
+        public static string permissionType = string.Empty;
 
-        public static string permissionList = String.Empty;
+        public static string permissionList = string.Empty;
 
         // Windows jogosultság igényléséhez
-        public static string group = String.Empty;
+        public static string group = string.Empty;
 
         // FŐNIX3 jogosultság igényléséhez
-        public static string specialitys = String.Empty;
+        public static string specialitys = string.Empty;
 
-        public static string localPermissions = String.Empty;
-        public static string nationPermissions = String.Empty;
+        public static string localPermissions = string.Empty;
+        public static string nationPermissions = string.Empty;
 
         // Parkolási engedély kéréséhez
-        public static string carType = String.Empty;
+        public static string carType = string.Empty;
 
-        public static string carBrand = String.Empty;
-        public static string carModell = String.Empty;
-        public static string licensePlace = String.Empty;
+        public static string carBrand = string.Empty;
+        public static string carModell = string.Empty;
+        public static string licensePlace = string.Empty;
 
         // PIN kód kiállításához
-        public static string generatedPIN = String.Empty;
+        public static string generatedPIN = string.Empty;
 
         // Kamerakép lementéséhez
-        public static string recordReason = String.Empty;
+        public static string recordReason = string.Empty;
 
-        public static string recordLineCount = String.Empty;
-        public static string recordCameraName = String.Empty;
-        public static string recordTimeStart = String.Empty;
-        public static string recordTimeEnd = String.Empty;
+        public static string recordLineCount = string.Empty;
+        public static string recordCameraName = string.Empty;
+        public static string recordTimeStart = string.Empty;
+        public static string recordTimeEnd = string.Empty;
 
         // Kijelölt ügyintéző neve
-        public static string fullName = String.Empty;
+        public static string fullName = string.Empty;
 
         // Javasló osztályvezető neve és osztályának neve
-        public static string classLeaderName = String.Empty;
+        public static string classLeaderName = string.Empty;
 
-        public static string classLeaderRole = String.Empty;
+        public static string classLeaderRole = string.Empty;
 
         // Megkeresi az összes hasonló értéket majd kicseréli az új értékre
         private static void FindAndReplaceAllShortItem(Application wordApp, object findMe, object replaceMe)
         {
             try
             {
-                object replaceAll = Word.WdReplace.wdReplaceAll;
-                object missing = System.Reflection.Missing.Value;
+                object replaceAll = WdReplace.wdReplaceAll;
+                object missing = Missing.Value;
                 wordApp.Application.Selection.Find.ClearFormatting();
                 wordApp.Application.Selection.Find.Text = (string)findMe;
                 wordApp.Application.Selection.Find.Replacement.ClearFormatting();

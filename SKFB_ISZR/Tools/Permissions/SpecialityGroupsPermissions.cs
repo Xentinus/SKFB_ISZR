@@ -1,4 +1,4 @@
-﻿namespace SKFB_ISZR
+﻿namespace SKFB_ISZR.Tools.Permissions
 {
     // Csoportok alap jogosultságaik
     internal class SpecialityGroupsPermissions
@@ -425,51 +425,51 @@
             {
                 case "Biztonsági osztály":
                     {
-                        return SpecialityGroupsPermissions.GetBiztPermissions(groupName);
+                        return GetBiztPermissions(groupName);
                     }
                 case "Büntetés - végrehajtási osztály":
                     {
-                        return SpecialityGroupsPermissions.GetBVPermissions(groupName);
+                        return GetBVPermissions(groupName);
                     }
                 case "EFOP":
                     {
-                        return SpecialityGroupsPermissions.GetEFOPPermissions(groupName);
+                        return GetEFOPPermissions(groupName);
                     }
                 case "Egészségügyi osztály":
                     {
-                        return SpecialityGroupsPermissions.GetEUPermissions(groupName);
+                        return GetEUPermissions(groupName);
                     }
                 case "Gazdasági osztály":
                     {
-                        return SpecialityGroupsPermissions.GetGazdosztPermissions(groupName);
+                        return GetGazdosztPermissions(groupName);
                     }
                 case "Gazdatási társaság":
                     {
-                        return SpecialityGroupsPermissions.GetGazdtarsPermissions(groupName);
+                        return GetGazdtarsPermissions(groupName);
                     }
                 case "Informatikai osztály":
                     {
-                        return SpecialityGroupsPermissions.GetInfoPermissions(groupName);
+                        return GetInfoPermissions(groupName);
                     }
                 case "Nemzeti Védelmi Szolgálat":
                     {
-                        return SpecialityGroupsPermissions.GetNVSZPermissions(groupName);
+                        return GetNVSZPermissions(groupName);
                     }
                 case "Személyügyi és szociális osztály":
                     {
-                        return SpecialityGroupsPermissions.GetSzemPermissions(groupName);
+                        return GetSzemPermissions(groupName);
                     }
                 case "Ügyészség":
                     {
-                        return SpecialityGroupsPermissions.GetUgyeszPermissions(groupName);
+                        return GetUgyeszPermissions(groupName);
                     }
                 case "Vezetői közvetlen":
                     {
-                        return SpecialityGroupsPermissions.GetVezkozvPermissions(groupName);
+                        return GetVezkozvPermissions(groupName);
                     }
                 case "Vezetőség":
                     {
-                        return SpecialityGroupsPermissions.GetVezetokPermissions(groupName);
+                        return GetVezetokPermissions(groupName);
                     }
                 default:
                     {

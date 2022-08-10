@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SKFB_ISZR
+﻿namespace SKFB_ISZR.Tools
 {
     // Központi ellenőrző
     internal class SummaryChecker
@@ -10,7 +8,7 @@ namespace SKFB_ISZR
         {
             foreach (string summaryData in summaryDatas)
             {
-                if (String.IsNullOrWhiteSpace(summaryData)) return false;
+                if (string.IsNullOrWhiteSpace(summaryData)) return false;
             }
             return true;
         }
