@@ -33,121 +33,128 @@ namespace SKFB_ISZR.Tools.Permissions
                 case "Biztonsági osztály":
                     {
                         specialityGroups.Items.Add("Biztonsági osztályvezető");
-                        specialityGroups.Items.Add("Biztonsági osztályvezető helyettes");
-                        specialityGroups.Items.Add("Biztonsági tiszt"); // TODO: átnevzve
-                        specialityGroups.Items.Add("Biztonsági főfelügyelő"); // TODO: átnevezve
-                        specialityGroups.Items.Add("Biztonsági felügyelő"); // TODO: átnevezve
+                        specialityGroups.Items.Add("Biztonsági osztályvezető-helyettes");
+                        specialityGroups.Items.Add("Biztonsági tiszt");
+                        specialityGroups.Items.Add("Biztonsági főfelügyelő");
+                        specialityGroups.Items.Add("Biztonsági felügyelő");
                         specialityGroups.Items.Add("Fegyveres biztonsági őr");
                         specialityGroups.Items.Add("Kutyatelep-vezető");
-                        specialityGroups.Items.Add("Kutyavezető"); // TODO: átnevezve
+                        specialityGroups.Items.Add("Kutyavezető");
                         specialityGroups.Items.Add("Müveleti csoport");
                         specialityGroups.Items.Add("Fegyvermester");
                         specialityGroups.Items.Add("Szállításvezető");
-                        specialityGroups.Items.Add("Titkárság"); // megnézni kell e még
-                        specialityGroups.Items.Add("Segédelőadó"); // TODO: új altípus
-                        specialityGroups.Items.Add("Előadó"); // TODO: új altípus horváth kata
-                        specialityGroups.Items.Add("Körlet felügyelők"); // TODO: áthelyezése a bv osztályból
-                        specialityGroups.Items.Add("Körlet főfelügyelők"); // TODO: áthelyezése a bv osztályból
+                        specialityGroups.Items.Add("Segédelőadó");
+                        specialityGroups.Items.Add("Előadó");
+                        specialityGroups.Items.Add("Körlet felügyelő");
+                        specialityGroups.Items.Add("Körlet főfelügyelő");
+                        specialityGroups.Items.Add("Műveleti főfelügyelő");
                         break;
                     }
                 case "Büntetés-végrehajtási osztály":
                     {
                         specialityGroups.Items.Add("Büntetés-végrehajtási osztályvezető");
                         specialityGroups.Items.Add("Büntetés-végrehajtási osztályvezető-helyettes");
-                        specialityGroups.Items.Add("Nyilvántartó előadó"); // TODO: átnevezésre került
-                        specialityGroups.Items.Add("Nyilvántartó segédelőadó"); // TODO: új altípus
-                        specialityGroups.Items.Add("Körlet ellátó főfelügyelő"); // TODO: átnevezve
-                        specialityGroups.Items.Add("Körlet ellátó segédelőadó"); // TODO: átnevezve
-                        specialityGroups.Items.Add("Vezető Reintegrációs tiszt");
-                        specialityGroups.Items.Add("Reintegraciós tiszt"); // TODO: átnevezve
-                        specialityGroups.Items.Add("Szociális segédelőadó"); // TODO: átnevezve
-                        specialityGroups.Items.Add("Pártfogó felügyelő"); // TODO: átnevezve
+                        specialityGroups.Items.Add("Nyilvántartó előadó");
+                        specialityGroups.Items.Add("Nyilvántartó segédelőadó");
+                        specialityGroups.Items.Add("Körlet ellátó főfelügyelő");
+                        specialityGroups.Items.Add("Körlet ellátó segédelőadó");
+                        specialityGroups.Items.Add("Vezető reintegrációs tiszt");
+                        specialityGroups.Items.Add("Reintegraciós tiszt");
+                        specialityGroups.Items.Add("Szociális segédelőadó");
+                        specialityGroups.Items.Add("Pártfogó felügyelő");
                         break;
                     }
                 case "EFOP":
                     {
                         specialityGroups.Items.Add("Csoportvezető");
-                        specialityGroups.Items.Add("Pályázati tanácsadó"); // TODO: átnevezve
+                        specialityGroups.Items.Add("Pályázati tanácsadó");
                         break;
                     }
                 case "Egészségügyi osztály":
                     {
                         specialityGroups.Items.Add("Egészségügyi osztályvezető");
-                        specialityGroups.Items.Add("Főápoló"); // TODO: átnevezve
-                        specialityGroups.Items.Add("Orvos"); // TODO: átnvezve
-                        specialityGroups.Items.Add("Orvos asszisztens"); // TODO: átnevezve
-                        specialityGroups.Items.Add("Szakápoló"); // TODO: átnevezve
-                        specialityGroups.Items.Add("Előadó"); // TODO: átnevezve
+                        specialityGroups.Items.Add("Főápoló");
+                        specialityGroups.Items.Add("Orvos");
+                        specialityGroups.Items.Add("Orvos asszisztens");
+                        specialityGroups.Items.Add("Szakápoló");
+                        specialityGroups.Items.Add("Előadó");
                         break;
                     }
                 case "Gazdasági osztály":
                     {
                         specialityGroups.Items.Add("Gazdasági vezető");
-                        specialityGroups.Items.Add("Gazdasági osztályvezető"); // TODO: új altípus
-                        specialityGroups.Items.Add("Gazdasági osztályvezető-helyettes"); // TODO: új altípus
-                        specialityGroups.Items.Add("Anyaggazdálkodási főelőadó");
-                        specialityGroups.Items.Add("Gépház raktáros"); // TODO: átnevezve
-                        specialityGroups.Items.Add("Gépház vezető"); // TODO: átnevezve
-                        specialityGroups.Items.Add("Gépjárművezető"); // TODO: átnevezve
-                        specialityGroups.Items.Add("Műszaki csoport");
-                        specialityGroups.Items.Add("Pénzügyi csoport");
-                        specialityGroups.Items.Add("Pénztáros"); // TODO: átnevezve
-                        specialityGroups.Items.Add("Számviteli csoport");
-                        specialityGroups.Items.Add("Élelmezési csoport");
-                        specialityGroups.Items.Add("Takarító"); // TODO: új altípus
-                        specialityGroups.Items.Add("Raktárvezető"); // TODO: új altípus
-                        specialityGroups.Items.Add("Raktáros"); // TODO: átnevezve
-                        specialityGroups.Items.Add("Gondnok");  // TODO: új altípus
+                        specialityGroups.Items.Add("Gazdasági osztályvezető");
+                        specialityGroups.Items.Add("Gazdasági osztályvezető-helyettes");
+                        specialityGroups.Items.Add("Gépház műhelyvezető");
+                        specialityGroups.Items.Add("Gépház foglalkoztatási segédelőadó");
+                        specialityGroups.Items.Add("Gépház művezető");
+                        specialityGroups.Items.Add("Élelmezésvezető");
+                        specialityGroups.Items.Add("Élelmezési csoportvezető");
+                        specialityGroups.Items.Add("Élelmezési foglalkoztatási segédelőadó");
+                        specialityGroups.Items.Add("Raktárvezető");
+                        specialityGroups.Items.Add("Raktáros foglalkoztatási segédelőadó");
+                        specialityGroups.Items.Add("Raktáros foglalkoztatási előadó");
+                        specialityGroups.Items.Add("Műszaki főelőadó");
+                        specialityGroups.Items.Add("Műszaki előadó");
+                        specialityGroups.Items.Add("Beszerző");
+                        specialityGroups.Items.Add("Gépjármű műhelyvezető");
+                        specialityGroups.Items.Add("Gépjárművezető");
+                        specialityGroups.Items.Add("Pénzügyi előadó");
+                        specialityGroups.Items.Add("Pénztáros");
+                        specialityGroups.Items.Add("Számvíteli főelőadó");
+                        specialityGroups.Items.Add("Számviteli előadó");
+                        specialityGroups.Items.Add("Gondnok");
+                        specialityGroups.Items.Add("Takarító");
                         break;
                     }
                 case "Gazdasági társaság":
                     {
-                        specialityGroups.Items.Add("Munkáltatási biztonsági vezető"); // TODO: új altípus
+                        specialityGroups.Items.Add("Munkáltatási biztonsági vezető");
                         specialityGroups.Items.Add("Biztonsági vezető");
-                        specialityGroups.Items.Add("Munkaügyi csoport");
+                        specialityGroups.Items.Add("Munkaügyi előadó");
                         specialityGroups.Items.Add("Titkárság");
                         specialityGroups.Items.Add("Igazgatóság");
-                        specialityGroups.Items.Add("Tűz és munkavédelmi vezető"); // TODO: új altípus
-                        specialityGroups.Items.Add("Sales Manager"); // TODO: új altípus
-                        specialityGroups.Items.Add("Művezető"); // TODO: új altípus
-                        specialityGroups.Items.Add("Mosodavezető"); // TODO: új altípus
-                        specialityGroups.Items.Add("Kiemelt művezető"); // TODO: új altípus
-                        specialityGroups.Items.Add("Kereskedelmi vezető"); // TODO: új altípus
-                        specialityGroups.Items.Add("Gépjárművezető"); // TODO: új altípus
-                        specialityGroups.Items.Add("Foglalkoztatási segédelőadó"); // TODO: új altípus
-                        specialityGroups.Items.Add("Foglalkoztatási felügyelő"); // TODO: új altípus
-                        specialityGroups.Items.Add("Bolt vezető"); // TODO: új altípus
-                        specialityGroups.Items.Add("Bolti eladó"); // TODO: új altípus
+                        specialityGroups.Items.Add("Tűz és munkavédelmi vezető");
+                        specialityGroups.Items.Add("Sales Manager");
+                        specialityGroups.Items.Add("Művezető");
+                        specialityGroups.Items.Add("Mosodavezető");
+                        specialityGroups.Items.Add("Kiemelt művezető");
+                        specialityGroups.Items.Add("Kereskedelmi vezető");
+                        specialityGroups.Items.Add("Gépjárművezető");
+                        specialityGroups.Items.Add("Foglalkoztatási segédelőadó");
+                        specialityGroups.Items.Add("Foglalkoztatási felügyelő");
+                        specialityGroups.Items.Add("Bolt vezető");
+                        specialityGroups.Items.Add("Bolti eladó");
                         break;
                     }
                 case "Informatikai osztály":
                     {
                         specialityGroups.Items.Add("Informatikai osztályvezető");
-                        specialityGroups.Items.Add("Informatikai főelőadó"); // TODO: új altípus
-                        specialityGroups.Items.Add("Informatikai előadó"); // TODO: átnevezve
-                        specialityGroups.Items.Add("Biztonságtechnikus"); // TODO: átnevezve
+                        specialityGroups.Items.Add("Informatikai főelőadó");
+                        specialityGroups.Items.Add("Informatikai előadó");
+                        specialityGroups.Items.Add("Biztonságtechnikus");
                         break;
                     }
                 case "Személyügyi és szociális osztály":
                     {
-                        specialityGroups.Items.Add("Személyügyi és szervezési osztályvezető");
-                        specialityGroups.Items.Add("Személyügyi főelőadó"); // TODO: új altípus
-                        specialityGroups.Items.Add("Személyügyi előadó"); // TODO: átnevezve
-                        specialityGroups.Items.Add("Személyügyi segédelőadó"); // TODO: újaltípus
-                        specialityGroups.Items.Add("Ügykezelő"); // TODO: átnevezve
+                        specialityGroups.Items.Add("Személyügyi osztályvezető");
+                        specialityGroups.Items.Add("Személyügyi főelőadó");
+                        specialityGroups.Items.Add("Személyügyi előadó");
+                        specialityGroups.Items.Add("Személyügyi segédelőadó");
+                        specialityGroups.Items.Add("Ügykezelő");
                         break;
                     }
                 case "Ügyészség":
                     {
-                        specialityGroups.Items.Add("Katonai ügyész"); // TODO: átnevezve
-                        specialityGroups.Items.Add("Ügyészségi fogalmazó"); // TODO: új altípus
+                        specialityGroups.Items.Add("Katonai ügyész");
+                        specialityGroups.Items.Add("Ügyészségi fogalmazó");
                         break;
                     }
                 case "Nemzeti Védelmi Szolgálat":
                     {
-                        specialityGroups.Items.Add("Kiemelt nyomozó"); // TODO: új altípus
-                        specialityGroups.Items.Add("Főelőadó"); // TODO: új altípus
-                        specialityGroups.Items.Add("Előadó"); // TODO: új altípus
+                        specialityGroups.Items.Add("Kiemelt nyomozó");
+                        specialityGroups.Items.Add("Főelőadó");
+                        specialityGroups.Items.Add("Előadó");
                         break;
                     }
                 case "Vezetőség":
@@ -162,12 +169,12 @@ namespace SKFB_ISZR.Tools.Permissions
                         specialityGroups.Items.Add("Tűzvédelmi vezető");
                         specialityGroups.Items.Add("Munkavédelmi vezető");
                         specialityGroups.Items.Add("Titkárságvezető");
-                        specialityGroups.Items.Add("Belső ellenőr"); // TODO: átnevezve
-                        specialityGroups.Items.Add("Jogtanácsos"); // TODO: átnevezve
-                        specialityGroups.Items.Add("Kártalantási előadó"); // TODO: átnevezve
-                        specialityGroups.Items.Add("Lelkész"); // TODO: átnevezve
-                        specialityGroups.Items.Add("Pszichológus"); // TODO: átnevezve
-                        specialityGroups.Items.Add("Előadó"); // TODO: átnevezve
+                        specialityGroups.Items.Add("Belső ellenőr");
+                        specialityGroups.Items.Add("Jogtanácsos");
+                        specialityGroups.Items.Add("Kártalantási előadó");
+                        specialityGroups.Items.Add("Lelkész");
+                        specialityGroups.Items.Add("Pszichológus");
+                        specialityGroups.Items.Add("Előadó");
                         break;
                     }
                 default:

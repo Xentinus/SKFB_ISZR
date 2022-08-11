@@ -2,7 +2,7 @@
 {
     internal class SpecialityPermissions
     {
-        public static string globalPermission = "SKFB-Adatszolgaltatasok; SKFB-Cafeteria; SKFB-FN3-F2020; SKFB-FN3-FONIX3; SKFB-FN3-Mobil; SKFB-FN-karbejelento; SKFB-FN-lekerdezok; SKFB-FN-Navigator-kfenaplo; SKFB-FN-Rebeka-felhasznalo; SKFB-Internet-Enabled; SKFB-Intranet; SKFB-MapRoamApp; SKFB-RobotZsaruNeo; SKFB-Users; ";
+        public static string globalPermission = "SKFB-Adatszolgaltatasok; SKFB-Cafeteria; SKFB-FN3-F2020; SKFB-FN3-FONIX3; SKFB-FN3-Mobil; SKFB-FN-karbejelento; SKFB-FN-lekerdezok; SKFB-FN-Navigator-kfenaplo; SKFB-FN-Navigator-megtekinto; SKFB-FN-Rebeka-felhasznalo; SKFB-Intranet; SKFB-MapRoamApp; SKFB-RobotZsaruNeo; SKFB-Users; ";
 
         public static string GetPermissions(string specialityName)
         {
@@ -10,7 +10,7 @@
             {
                 case "Biztonsági osztály":
                     {
-                        return "SKFB-BIZT; SKFB-FN-bizt; SKFB-Scan-Bizt; SKFB-FN-Navigator-belepesinaplo; SKFB-FN-Navigator-megtekinto; " + globalPermission;
+                        return "SKFB-BIZT; SKFB-FN-bizt; SKFB-Scan-Bizt; SKFB-FN-Navigator-belepesinaplo; " + globalPermission;
                     }
                 case "Büntetés-végrehajtási osztály":
                     {
