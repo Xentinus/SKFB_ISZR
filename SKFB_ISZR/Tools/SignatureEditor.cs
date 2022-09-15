@@ -62,6 +62,10 @@
                     {
                         return "Fuszik Eszter bv. tőrm.";
                     }
+                case "Kovács Márta":
+                    {
+                        return "Kovács Márta bv.ra.";
+                    }
                 // Gazdasági osztály
                 case "Drávai Klaudia":
                     {
@@ -74,6 +78,14 @@
                 case "Horváthné Németh Marianna":
                     {
                         return "Horváthné Németh Marianna bv. mv.";
+                    }
+                case "Huszárné Molnár Katalin":
+                    {
+                        return "Huszárné Molnár Katalin bv. ra.";
+                    }
+                case "Németh Mihály":
+                    {
+                        return "Németh Mihály bv. ra.";
                     }
                 // Vezetői közvetlen
                 case "Horváth Klaudia":
@@ -120,6 +132,15 @@
                 case "Varga László":
                     {
                         return "Varga László bv. szds.";
+                    }
+                // Egészségügyi osztály
+                case "Lökös Viktória":
+                    {
+                        return "Csóka Viktória bv. törm.";
+                    }
+                case "Csóka Viktória":
+                    {
+                        return "Csóka Viktória bv. törm";
                     }
                 // Személyügyi osztály
                 case "Molnár Elvira":
