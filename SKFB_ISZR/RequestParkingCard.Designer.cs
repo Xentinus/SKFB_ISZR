@@ -260,6 +260,7 @@ namespace SKFB_ISZR
             this.postText.FormattingEnabled = true;
             this.postText.Items.AddRange(new object[] {
             "Ápoló",
+            "Belső ellenőr",
             "Biztonsági felügyelő",
             "Biztonsági tiszt",
             "Biztonsági vezető",
@@ -271,6 +272,7 @@ namespace SKFB_ISZR
             "Energetikai vezető",
             "Fegyelmi és nyomozó tiszt",
             "Fegyelmi tiszt",
+            "Felügyelő",
             "Fegyvermester",
             "Főápoló",
             "Főelőadó",
@@ -278,6 +280,7 @@ namespace SKFB_ISZR
             "Foglalkoztatási felügyelő",
             "Foglalkoztatási segédelőadó",
             "Fogvatartotti boltos",
+            "Főigazgató",
             "Főigazgató-főorvos",
             "Főigazgató-helyettes",
             "Főművezető",
@@ -332,6 +335,7 @@ namespace SKFB_ISZR
             "Szakápoló",
             "Szakasszisztens",
             "Szakoktató",
+            "Szakorvos",
             "Szakpszichológus",
             "Szállítmányvezető",
             "Szociális segédelőadó",
