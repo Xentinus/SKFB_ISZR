@@ -86,6 +86,7 @@
                  new string[] { "Főnix hívásnapló", "SKFB-FN-hivasnaplo-megtekinto" },
                  new string[] { "Főnix könyvelő", "SKFB-FN-konyvelo" },
                  new string[] { "ForrasDotNet", "SKFB-ForrasDotNet; SKFB-ForrasUsers" },
+                 new string[] { "Fogvatartotti lista mappa szerkesztő", "SKFB-FogvatartottiLista-szerkesztok"},
                  new string[] { "Futárjegyzék készítő", "SKFB-Futar" },
                  new string[] { "Gazdasági osztály Belső mappa", "SKFB-GAZD"},
                  new string[] { "gazdasági osztály Gazdasági vezető mappa", "SKFB-Gazd-Gazdvez"},

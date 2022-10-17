@@ -727,6 +727,7 @@ namespace SKFB_ISZR
             "eSzigno",
             "Fegyelmi modul jogkör gyakorló",
             "Fényképek",
+            "Fogvatartotti lista mappa szerkesztő",
             "Fogvatartotti mobiltelefon behallgatók",
             "Fogvatartotti mobiltelefon megtekintő",
             "Fogvatartotti mobiltelefon ügyintéző",
@@ -1082,7 +1083,17 @@ namespace SKFB_ISZR
             "SKFB-PR149",
             "SKFB-PR150",
             "SKFB-PR151",
-            "SKFB-PR152"});
+            "SKFB-PR152",
+            "SKFB-PR153",
+            "SKFB-PR154",
+            "SKFB-PR155",
+            "SKFB-PR156",
+            "SKFB-PR157",
+            "SKFB-PR158",
+            "SKFB-PR159",
+            "SKFB-PR160",
+            "SKFB-PR161",
+            "SKFB-PR162"});
             this.printersText.Location = new System.Drawing.Point(40, 37);
             this.printersText.MultiColumn = true;
             this.printersText.Name = "printersText";
@@ -1519,6 +1530,7 @@ namespace SKFB_ISZR
             "eSzigno",
             "Fegyelmi modul jogkör gyakorló",
             "Fényképek",
+            "Fogvatartotti lista mappa szerkesztő",
             "Fogvatartotti mobiltelefon behallgatók",
             "Fogvatartotti mobiltelefon megtekintő",
             "Fogvatartotti mobiltelefon ügyintéző",
