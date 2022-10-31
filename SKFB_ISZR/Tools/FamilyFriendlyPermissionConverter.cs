@@ -142,6 +142,8 @@
                  new string[] { "Navigator körletfőfelügyelői napló jóváhagyó", "SKFB-FN-Navigator-kffenaplo-jovahagyo" },
                  new string[] { "Navigator munkahelyi szolgálati napló", "SKFB-FN-Navigator-munkahelyiszolgalatinaplo" },
                  new string[] { "Navigator munkahelyi szolgálati napló jóváhagyó", "SKFB-FN-Navigator-munkahelyiszolgalatinaplo-jovahagyo" },
+                 new string[] { "Navigator eseményjelentő - agglomerációs", "SKFB-FN-Navigator-Jelento-agglomeracio"},
+                 new string[] { "Navigator eseményjelentő - intézeti rögzítő", "SKFB-FN-Navigator-Jelento-rogzito"},
                  new string[] { "NEXON", "SKFB-Nexon; SKFB-NexonHRpersONLINE" },
                  new string[] { "NEXON - Intézeti Bv. vezető", "SKFB-NXN; SKFB-NX-IBVV" },
                  new string[] { "NEXON - Intézeti fegyelmi vizsgáló", "SKFB-NXN; SKFB-NX-IFEM" },
