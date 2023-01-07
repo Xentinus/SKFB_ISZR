@@ -1,11 +1,15 @@
 ﻿namespace SKFB_ISZR.Tools
 {
-    internal class FamilyFriendlyPermissionConverter
+    internal class PermissionConverter
     {
-        public static string[][] permissions = new string[][]
+        public static readonly string[][] permissions = new string[][]
             {
                  new string[] { "Abevjava", "SKFB-Abevjava; SKFB-Abevupdate" },
                  new string[] { "Adatszolgáltatások", "SKFB-Adatszolgaltatasok" },
+                 new string[] { "Biztonsági adatszolgáltatás kitöltő", "SKFB-Adatszolg-Kitolto-Biztonsag"},
+                 new string[] { "Informatikai adatszolgáltatás kitöltő", "SKFB-Adatszolg-Kitolto-Informatika"},
+                 new string[] { "Jogi adatszolgálatás kitöltő", "SKFB-Adatszolg-Kitolto-Jogi"},
+                 new string[] { "Rendezvény adatszolgálatás kitöltő", "SKFB-Adatszolg-Kitolto-Rendezvenyek"},
                  new string[] { "IP hálózat scannelése", "SKFB-Advanced-IP-Scanner" },
                  new string[] { "Animula", "SKFB-Animula" },
                  new string[] { "ÁSZ ellenőrzés feltöltő", "SKFB-Asz" },
@@ -48,7 +52,8 @@
                  new string[] { "BVORG O_KOZBESZ ES PROJECT FO", "SKFB-BVORG-O"},
                  new string[] { "BVORG P_KOZGAZD FO", "SKFB-BVORG-P"},
                  new string[] { "BVORG Q_KOZP ELL FO", "SKFB-BVORG-Q"},
-                 new string[] { "BVORG R_MEF", "SKFB-BVORG-S"},
+                 new string[] { "BVORG R_KSZNYFO", "SKFB-BVORG-R"},
+                 new string[] { "BVORG S_MEF", "SKFB-BVORG-S"},
                  new string[] { "Cafeteria", "SKFB-Cafeteria" },
                  new string[] { "Cafeteria adminisztrátor", "SKFB-CafeteriaAdmin" },
                  new string[] { "CARREG", "SKFB-Carreg; SKFB-Carreg-Readers; SKFB-Carreg-Users" },
@@ -193,11 +198,13 @@
                  new string[] { "RobotZsaru Sajtó", "SKFB-SajtoRZS" },
                  new string[] { "SAFE", "SKFB-FN-Rebeka-felhasznalo" },
                  new string[] { "SAFE adminisztrátor", "SKFB-FN-Safe-admin" },
+                 new string[] { "RIN EFOP", "SKFB-FN-RIN-EFOPESETMENEDZSER"},
                  new string[] { "Scan - Biztonsági osztály", "SKFB-Scan-Bizt"},
                  new string[] { "Scan - BV osztály", "SKFB-Scan-Bv"},
                  new string[] { "Scan - EFOP", "SKFB-Scan-Efop"},
                  new string[] { "Scan - Egészségügyi osztály", "SKFB-Scan-Eu"},
                  new string[] { "Scan - Gazdasági osztály", "SKFB-Scan-Gazd"},
+                 new string[] { "Scan - Gazdasági Ellátó Intézet", "SKFB-Scan-GEI"},
                  new string[] { "Scan - Gazdasági társaság", "SKFB-Scan-Gt"},
                  new string[] { "Scan - Informatikai osztály", "SKFB-Scan-Info"},
                  new string[] { "Scan - Párfogó", "SKFB-Scan-Pf"},
@@ -237,7 +244,7 @@
                  new string[] { "Zabbix hálózat ellenőrző", "SKFB-Zabbix"},
             };
 
-        public static string ReturnFamilyFriendlyName(string normalPermissionName)
+        public static string ReturnUserFriendlyName(string normalPermissionName)
         {
             for (int i = 0; i < permissions.Length; i++)
             {
@@ -246,11 +253,11 @@
             return " ";
         }
 
-        public static string ReturnNormalPermissionName(string familyFriendlyPermissionName)
+        public static string ReturnADPermissions(string userFriendlyName)
         {
             for (int i = 0; i < permissions.Length; i++)
             {
-                if (permissions[i][0].Contains(familyFriendlyPermissionName)) return permissions[i][1];
+                if (permissions[i][0].Contains(userFriendlyName)) return permissions[i][1];
             }
             return " ";
         }

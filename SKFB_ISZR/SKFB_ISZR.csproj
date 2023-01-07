@@ -140,7 +140,7 @@
     <Compile Include="LoadingSave.Designer.cs">
       <DependentUpon>LoadingSave.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tools\FamilyFriendlyPermissionConverter.cs" />
+    <Compile Include="Tools\PermissionConverter.cs" />
     <Compile Include="MainDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,9 +192,9 @@
     <Compile Include="RequestPhonePIN.Designer.cs">
       <DependentUpon>RequestPhonePIN.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tools\Permissions\SpecialityGroups.cs" />
-    <Compile Include="Tools\Permissions\SpecialityGroupsPermissions.cs" />
-    <Compile Include="Tools\Permissions\SpecialityPermissions.cs" />
+    <Compile Include="Tools\Permissions\ClassGroups.cs" />
+    <Compile Include="Tools\Permissions\GroupPermissions.cs" />
+    <Compile Include="Tools\Permissions\ClassPermissions.cs" />
     <Compile Include="Tools\SummaryChecker.cs" />
     <Compile Include="Tools\DocumentEditor.cs" />
     <Compile Include="Tools\SignatureEditor.cs" />

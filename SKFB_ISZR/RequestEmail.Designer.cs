@@ -475,18 +475,18 @@ namespace SKFB_ISZR
             this.specialtyText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
             this.specialtyText.FormattingEnabled = true;
             this.specialtyText.Items.AddRange(new object[] {
-            "Biztonsági osztály",
-            "Büntetés-végrehajtási osztály",
+            "Biztonsági és fogvatartási ügyek osztálya",
             "EFOP",
-            "Egészségügyi osztály",
-            "Gazdasági osztály",
-            "Gazdasági társaság",
-            "Informatikai osztály",
-            "Nemzeti Védelmi Szolgálat",
-            "Személyügyi és szociális osztály",
-            "Ügyészség",
+            "Egészségügyi és pszichológiai osztály",
+            "Gazdasági Ellátó Intézet",
+            "Humánpolitikai osztály",
+            "Ipari, termelési, logisztikai és üzemfenntartási osztály",
+            "Kereskedelmi és ruhaipari osztály",
+            "Minőségellenőrzési osztály",
+            "Műszaki ellátási osztály",
+            "Személyügyi és titkársági osztály",
             "Vezetői közvetlen",
-            "Vezetőség"});
+            "Vezetői törzs"});
             this.specialtyText.Location = new System.Drawing.Point(135, 177);
             this.specialtyText.Name = "specialtyText";
             this.specialtyText.Size = new System.Drawing.Size(349, 29);

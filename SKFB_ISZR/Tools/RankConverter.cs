@@ -1,28 +1,8 @@
 ﻿namespace SKFB_ISZR.Tools
 {
-    internal class RankConverter
+    public static class RankConverter
     {
-        /*
-         *  munkavállaló - mv.
-            rendvédelmi-alkalmazott - ra.
-            őrmester - őrm.
-            törzsörmester - tőrm.
-            főtörzsörmester - ftőrm.
-            zászlós - zls.
-            törzszászlós - tzls.
-            főtörzszászlós - ftzls.
-            hadnagy - hdgy.
-            főhadnagy - fhdgy.
-            százados - szds.
-            őrnagy - őrgy.
-            alezredes - alez.
-            ezredes - ezds.
-            dandártábornok - ddtbk.
-            vezérőrnagy - vőrgy.
-            altábornagy - altbgy.
-        */
-
-        public static string GetShortRank(string longRank)
+        public static string Short(string longRank)
         {
             switch (longRank)
             {

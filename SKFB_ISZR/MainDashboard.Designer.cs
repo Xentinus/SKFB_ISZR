@@ -36,7 +36,6 @@ namespace SKFB_ISZR
             this.cameraRecordButton = new System.Windows.Forms.Button();
             this.cameraPermissionsButton = new System.Windows.Forms.Button();
             this.phoneButton = new System.Windows.Forms.Button();
-            this.parkingButton = new System.Windows.Forms.Button();
             this.emailButton = new System.Windows.Forms.Button();
             this.fonixButton = new System.Windows.Forms.Button();
             this.windowsButton = new System.Windows.Forms.Button();
@@ -45,6 +44,7 @@ namespace SKFB_ISZR
             this.sideBackground = new System.Windows.Forms.Panel();
             this.noPINAlertText = new System.Windows.Forms.Label();
             this.noPINAlertBox = new System.Windows.Forms.Label();
+            this.parkingButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // closeButton
@@ -95,7 +95,7 @@ namespace SKFB_ISZR
             this.cameraRecordButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cameraRecordButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(79)))), ((int)(((byte)(101)))));
             this.cameraRecordButton.Image = global::SKFB_ISZR.Properties.Resources.kamerakep;
-            this.cameraRecordButton.Location = new System.Drawing.Point(890, 443);
+            this.cameraRecordButton.Location = new System.Drawing.Point(663, 443);
             this.cameraRecordButton.Name = "cameraRecordButton";
             this.cameraRecordButton.Size = new System.Drawing.Size(150, 200);
             this.cameraRecordButton.TabIndex = 6;
@@ -115,7 +115,7 @@ namespace SKFB_ISZR
             this.cameraPermissionsButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cameraPermissionsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(79)))), ((int)(((byte)(101)))));
             this.cameraPermissionsButton.Image = global::SKFB_ISZR.Properties.Resources.hikcentral;
-            this.cameraPermissionsButton.Location = new System.Drawing.Point(663, 443);
+            this.cameraPermissionsButton.Location = new System.Drawing.Point(436, 443);
             this.cameraPermissionsButton.Name = "cameraPermissionsButton";
             this.cameraPermissionsButton.Size = new System.Drawing.Size(150, 200);
             this.cameraPermissionsButton.TabIndex = 5;
@@ -136,7 +136,7 @@ namespace SKFB_ISZR
             this.phoneButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(79)))), ((int)(((byte)(101)))));
             this.phoneButton.Image = global::SKFB_ISZR.Properties.Resources.phone;
-            this.phoneButton.Location = new System.Drawing.Point(436, 443);
+            this.phoneButton.Location = new System.Drawing.Point(1117, 197);
             this.phoneButton.Name = "phoneButton";
             this.phoneButton.Size = new System.Drawing.Size(150, 200);
             this.phoneButton.TabIndex = 4;
@@ -145,26 +145,6 @@ namespace SKFB_ISZR
             this.phoneButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.phoneButton.UseVisualStyleBackColor = false;
             this.phoneButton.Click += new System.EventHandler(this.RequestPhonePINButton_Click);
-            // 
-            // parkingButton
-            // 
-            this.parkingButton.BackColor = System.Drawing.Color.White;
-            this.parkingButton.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.parkingButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(79)))), ((int)(((byte)(101)))));
-            this.parkingButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(215)))), ((int)(((byte)(250)))));
-            this.parkingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.parkingButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.parkingButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(79)))), ((int)(((byte)(101)))));
-            this.parkingButton.Image = global::SKFB_ISZR.Properties.Resources.car;
-            this.parkingButton.Location = new System.Drawing.Point(1117, 197);
-            this.parkingButton.Name = "parkingButton";
-            this.parkingButton.Size = new System.Drawing.Size(150, 200);
-            this.parkingButton.TabIndex = 3;
-            this.parkingButton.Text = " \r\nPARKOLÁSI ENGEDÉLY";
-            this.parkingButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.parkingButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.parkingButton.UseVisualStyleBackColor = false;
-            this.parkingButton.Click += new System.EventHandler(this.RequestParkingCardButton_Click);
             // 
             // emailButton
             // 
@@ -241,6 +221,7 @@ namespace SKFB_ISZR
             // helpdeskButton
             // 
             this.helpdeskButton.BackColor = System.Drawing.Color.White;
+            this.helpdeskButton.Enabled = false;
             this.helpdeskButton.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.helpdeskButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(79)))), ((int)(((byte)(101)))));
             this.helpdeskButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(215)))), ((int)(((byte)(250)))));
@@ -256,6 +237,7 @@ namespace SKFB_ISZR
             this.helpdeskButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.helpdeskButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.helpdeskButton.UseVisualStyleBackColor = false;
+            this.helpdeskButton.Visible = false;
             this.helpdeskButton.Click += new System.EventHandler(this.HelpdeskButton_Click);
             // 
             // sideBackground
@@ -292,6 +274,26 @@ namespace SKFB_ISZR
             this.noPINAlertBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.noPINAlertBox.Visible = false;
             // 
+            // parkingButton
+            // 
+            this.parkingButton.BackColor = System.Drawing.Color.White;
+            this.parkingButton.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.parkingButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(79)))), ((int)(((byte)(101)))));
+            this.parkingButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(215)))), ((int)(((byte)(250)))));
+            this.parkingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.parkingButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parkingButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(79)))), ((int)(((byte)(101)))));
+            this.parkingButton.Image = global::SKFB_ISZR.Properties.Resources.car;
+            this.parkingButton.Location = new System.Drawing.Point(890, 443);
+            this.parkingButton.Name = "parkingButton";
+            this.parkingButton.Size = new System.Drawing.Size(150, 200);
+            this.parkingButton.TabIndex = 3;
+            this.parkingButton.Text = " \r\nPARKOLÁSI ENGEDÉLY";
+            this.parkingButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.parkingButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.parkingButton.UseVisualStyleBackColor = false;
+            this.parkingButton.Click += new System.EventHandler(this.RequestParkingCardButton_Click);
+            // 
             // MainDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,6 +302,7 @@ namespace SKFB_ISZR
             this.BackgroundImage = global::SKFB_ISZR.Properties.Resources.theme_9_bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1400, 800);
+            this.Controls.Add(this.parkingButton);
             this.Controls.Add(this.sideBackground);
             this.Controls.Add(this.downButton);
             this.Controls.Add(this.noPINAlertBox);
@@ -311,7 +314,6 @@ namespace SKFB_ISZR
             this.Controls.Add(this.cameraRecordButton);
             this.Controls.Add(this.cameraPermissionsButton);
             this.Controls.Add(this.phoneButton);
-            this.Controls.Add(this.parkingButton);
             this.Controls.Add(this.emailButton);
             this.Controls.Add(this.fonixButton);
             this.Controls.Add(this.windowsButton);
@@ -337,7 +339,6 @@ namespace SKFB_ISZR
         private System.Windows.Forms.Label welcomeText;
         private System.Windows.Forms.Button fonixButton;
         private System.Windows.Forms.Button emailButton;
-        private System.Windows.Forms.Button parkingButton;
         private System.Windows.Forms.Button phoneButton;
         private System.Windows.Forms.Button cameraPermissionsButton;
         private System.Windows.Forms.Button cameraRecordButton;
@@ -347,5 +348,6 @@ namespace SKFB_ISZR
         private System.Windows.Forms.Panel sideBackground;
         private System.Windows.Forms.Label noPINAlertText;
         private System.Windows.Forms.Label noPINAlertBox;
+        private System.Windows.Forms.Button parkingButton;
     }
 }

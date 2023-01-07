@@ -102,7 +102,8 @@ namespace SKFB_ISZR
             if (stepCounter == 1 && newUser)
             {
                 stepCounter += 2;
-            } else
+            }
+            else
             {
                 stepCounter++;
             }
@@ -170,9 +171,9 @@ namespace SKFB_ISZR
             groupText.Items.Clear();
 
             // Szakterület alapján csoportok hozzáadása
-            SpecialityGroups.GetGroups(specialtyText.Text);
+            ClassGroups.GetGroups(specialtyText.Text);
 
-            foreach (object specialityGroup in SpecialityGroups.specialityGroups.Items)
+            foreach (object specialityGroup in ClassGroups.specialityGroups.Items)
             {
                 groupText.Items.Add(specialityGroup);
             }
@@ -191,7 +192,7 @@ namespace SKFB_ISZR
             foreach (string permissionName in linedPermissions.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries))
             {
                 // Jogosultságok átkonvertálása családbaráttá
-                string familyFriendlyPermissionName = FamilyFriendlyPermissionConverter.ReturnFamilyFriendlyName(permissionName);
+                string familyFriendlyPermissionName = PermissionConverter.ReturnUserFriendlyName(permissionName);
 
                 // Listában nem szereplő jogosultságok átugrása (pl skfb-users)
                 if (familyFriendlyPermissionName == string.Empty) continue;
@@ -215,10 +216,10 @@ namespace SKFB_ISZR
         private string GetGroupPermissions()
         {
             // Osztály jogosultságok lekérdezése
-            string groupPermissions = SpecialityPermissions.GetPermissions(specialtyText.Text);
+            string groupPermissions = ClassPermissions.getPermissions(specialtyText.Text);
 
             // Csoport jogosultságok lekérdezése
-            groupPermissions += SpecialityGroupsPermissions.GetPermissions(specialtyText.Text, groupText.Text);
+            groupPermissions += GroupPermissions.GetPermissions(specialtyText.Text, groupText.Text);
             return groupPermissions + "; ";
         }
 
@@ -233,7 +234,7 @@ namespace SKFB_ISZR
                 if (choosePermissionsText.GetItemCheckState(i) == CheckState.Checked)
                 {
                     // Családbarát jogosultságok átkonvertálása AD-s jogosultsággá
-                    string personalPermission = FamilyFriendlyPermissionConverter.ReturnNormalPermissionName(choosePermissionsText.Items[i].ToString());
+                    string personalPermission = PermissionConverter.ReturnADPermissions(choosePermissionsText.Items[i].ToString());
                     personalPermissions += personalPermission + "; ";
                 }
             }
@@ -389,7 +390,7 @@ namespace SKFB_ISZR
             // Adatok elküldése a Documentum szerkeztőnek
             DocumentEditor.lastName = checkLastNameText.Text;
             DocumentEditor.firstName = checkFirstNameText.Text;
-            DocumentEditor.rank = RankConverter.GetShortRank(checkRankText.Text);
+            DocumentEditor.rank = RankConverter.Short(checkRankText.Text);
             DocumentEditor.username = checkUsernameText.Text;
             DocumentEditor.specialty = checkSpecialtyText.Text;
             DocumentEditor.group = checkGroupText.Text;
@@ -407,7 +408,7 @@ namespace SKFB_ISZR
 
                 // Dokumentum elkésítésének sikerességének megjelenítése
                 LoadingSave.fileSavedTitle.Text = "Fájl mentése sikeresen befejezödött";
-                LoadingSave.fileSavedInfo.Text = "A generált fájl mostmár robotzsaruzható az 5-ös főszámon";
+                LoadingSave.fileSavedInfo.Text = "A generált fájl mostmár robotzsaruzható";
             }
             catch
             {

@@ -1,21 +1,21 @@
 ﻿namespace SKFB_ISZR.Tools.Permissions
 {
     // Csoportok alap jogosultságaik
-    internal class SpecialityGroupsPermissions
+    internal class GroupPermissions
     {
         // Ha az adott csoportnak nincs semmi egyedi jogosultsága
         private const string noPermissions = " ";
 
-        // Biztonsági osztály csoportjainak jogosultságai
-        private static string GetBiztPermissions(string groupName)
+        // Biztonsági és fogvatartási ügyek osztály csoportjainak jogosultságai
+        private static string GetBiztAndBVPermissions(string groupName)
         {
             switch (groupName)
             {
-                case "Biztonsági osztályvezető":
+                case "Osztályvezető":
                     {
                         return "SKFB-Bizt-Biztov; SKFB-Vezetok; SKFB-IrfanView; SKFB-A28G010555; SKFB-NX-ISZM; SKFB-Nexon; SKFB-FN-bizt-ov; SKFB-Internet-Enabled; SKFB-OptenCeginfo; SKFB-OptenOptijusPlussz; SKFB-Gt-Biztvez; SKFB-PR30; SKFB-FN-int-vedett; SKFB-FTPUsers; SKFB-NexonHRpersONLINE; SKFB-FTPVedelem; SKFB-KiemeltFogvatartottR; SKFB-VezetoiSzignalas; SKFB-Ter; SKFB-Vir; SKFB-VIR-Munkaltatas-User; SKFB-BIZTOV; SKFB-Letszamjelentes-biztpub; SKFB-Ellenorzesinaplo-biztpub-iras; SKFB-FN-Navigator-eloallitasnaplo; SKFB-FN-Navigator-jelentesrekotnaplo; SKFB-FN-Navigator-ellenorzesinaplo; SKFB-BIT-JELENTES; SKFB-FN-Navigator-ellenorzesinaplo-jovahagyo; SKFB-MarathonTerra3; SKFB-NYDR-Bizt; SKFB-NYDR; SKFB-FN-Navigator-ejfeli-adatszolgaltatas; SKFB-FN-Navigator-bitnaplo; SKFB-FN-Navigator-bitnaplo-jovahagyo; SKFB-FN-Navigator-kffenaplo-jovahagyo; SKFB-FN-Navigator-munkahelyiszolgalatinaplo-jovahagyo; SKFB-IKKB; SKFB-FN-Navigator-bitnaplo-osztalyvezeto; SKFB-IntranetAdatszolgaltatasKitolto; SKFB-BVORG-B; SKFB-BVORG-D; SKFB-BVORG-L; SKFB-Adatszolg-Kitolto-Biztonsag";
                     }
-                case "Biztonsági osztályvezető-helyettes":
+                case "Biztonsági alosztályvezető":
                     {
                         return "SKFB-Bizt-Biztov; SKFB-Vezetok; SKFB-IrfanView; SKFB-A28G010555; SKFB-PR25; SKFB-NX-ISZM; SKFB-Nexon; SKFB-FN-bizt-ov; SKFB-Internet-Enabled; SKFB-OptenCeginfo; SKFB-OptenOptijusPlussz; SKFB-FN-int-vedett; SKFB-FTPUsers; SKFB-NexonHRpersONLINE; SKFB-FTPVedelem; SKFB-KiemeltFogvatartottR; SKFB-VezetoiSzignalas; SKFB-Ter; SKFB-Vir; SKFB-VIR-Munkaltatas-User; SKFB-BIZTOV; SKFB-Letszamjelentes-biztpub; SKFB-Ellenorzesinaplo-biztpub-iras; SKFB-FN-Navigator-eloallitasnaplo; SKFB-FN-Navigator-jelentesrekotnaplo; SKFB-FN-Navigator-ellenorzesinaplo; SKFB-FN-Navigator-belepesinaplo; SKFB-BIT-JELENTES; SKFB-FN-Navigator-ellenorzesinaplo-jovahagyo; SKFB-MarathonTerra3; SKFB-NYDR; SKFB-FN-Navigator-ejfeli-adatszolgaltatas; SKFB-FN-Navigator-bitnaplo; SKFB-FN-Navigator-bitnaplo-jovahagyo; SKFB-FN-Navigator-kffenaplo-jovahagyo; SKFB-FN-Navigator-munkahelyiszolgalatinaplo-jovahagyo; SKFB-IKKB; SKFB-FN-Navigator-bitnaplo-osztalyvezeto; SKFB-IntranetAdatszolgaltatasKitolto; SKFB-BVORG-B; SKFB-BVORG-D; SKFB-BVORG-L; SKFB-Adatszolg-Kitolto-Biztonsag";
                     }
@@ -47,11 +47,11 @@
                     {
                         return "SKFB-Bizt-Bfe; SKFB-Internet-Enabled; SKFB-NexonHRpersONLINE; SKFB-FN-Navigator-belepesinaplo";
                     }
-                case "Segédelőadó":
+                case "Biztonsági segédelőadó":
                     {
                         return "SKFB-ForrasUsers; SKFB-Bizt-Biztov; SKFB-A28G010555; SKFB-PR25; SKFB-NX-ISZM; SKFB-Nexon; SKFB-FN-csomagoszto; SKFB-FN-korl-fofelugy; SKFB-FN-targyraktaros; SKFB-Internet-Enabled; SKFB-FN-fogugykez; SKFB-FN-befog-elsolet; SKFB-NX-SZAB; SKFB-FTPUsers; SKFB-NexonHRpersONLINE; SKFB-NoemiHelpDesk; SKFB-VezetoiSzignalas; SKFB-FN-PME-ugyintezo; SKFB-FN-fogl-munkahelyvezeto; SKFB-ForrasDotNet; SKFB-FN-csomagkezelo-atado-szerk; SKFB-FN-csomagkezelo-atado; SKFB-Letszamjelentes-biztpub; SKFB-Ellenorzesinaplo-biztpub-olvasas; SKFB-FN-Navigator-belepesinaplo; SKFB-FN-Fegyelmi-fofelugyelo; SKFB-FN-Navigator-ejfeli-adatszolgaltatas; SKFB-FN-Navigator-bitnaplo; SKFB-FN-Navigator-bitnaplo-korletfofelugyelo; SKFB-ISZR; SKFB-BVORG-B; SKFB-BVORG-D; SKFB-BVORG-L; SKFB-Adatszolg-Kitolto-Biztonsag; SKFB-SzolgalatSzervezes";
                     }
-                case "Előadó":
+                case "Biztonsági előadó":
                     {
                         return "SKFB-Bizt-Biztov; SKFB-A28G010555; SKFB-PR25; SKFB-NX-ISZM; SKFB-Nexon; SKFB-Internet-Enabled; SKFB-NX-SZAB; SKFB-FTPUsers; SKFB-NexonHRpersONLINE; SKFB-NoemiHelpDesk; SKFB-VezetoiSzignalas; SKFB-PR121; SKFB-FN-Navigator-eloallitasnaplo; SKFB-FN-Navigator-belepesinaplo; SKFB-FN-Navigator-bitnaplo; SKFB-ISZR; SKFB-BVORG-B; SKFB-BVORG-D; SKFB-SzolgalatSzervezes";
                     }
@@ -67,23 +67,11 @@
                     {
                         return "SKFB-NX-ISZM; SKFB-Nexon; SKFB-Internet-Enabled; SKFB-FN-fogugykez; SKFB-NX-SZAB; SKFB-Bizt-MuveletiCsoport; SKFB-FN-Navigator-eloallitasnaplo; SKFB-FN-Navigator-jelentesrekotnaplo; SKFB-FN-Navigator-ellenorzesinaplo; SKFB-FN-Navigator-belepesinaplo; SKFB-PR105; SKFB-PR03";
                     }
-                default:
-                    {
-                        return noPermissions;
-                    }
-            }
-        }
-
-        // BV osztály csoportjainak jogosultságai
-        private static string GetBVPermissions(string groupName)
-        {
-            switch (groupName)
-            {
-                case "Büntetés-végrehajtási osztályvezető":
+                case "Fogvatartási alosztályvezető":
                     {
                         return "SKFB-Bv-Reintegracio; SKFB-Vezetok; SKFB-IrfanView; SKFB-Bv-Bvov; SKFB-NX-ISZM; SKFB-NX-ISZA; SKFB-Nexon; SKFB-Internet-Enabled; SKFB-OptenOptijusPlussz; SKFB-FN-int-vedett; SKFB-NX-SZAB; SKFB-FTPUsers; SKFB-NexonHRpersONLINE; SKFB-FTPVedelem; SKFB-KiemeltFogvatartottR; SKFB-VezetoiSzignalas; SKFB-Ter; SKFB-Vir; SKFB-VIR-Munkaltatas-User; SKFB-Bfb; SKFB-FN-PME-ugyintezo; SKFB-FN-PME-reintegracio; SKFB-FN-kart-adatszolgaltato; SKFB-FN-kart-ugyintezo; SKFB-PR61; SKFB-FN-kart-egyeb-panasz-kivizsgalo; SKFB-FN-kart-megtekinto; SKFB-FN-SZERZODES-MEGTEKINTO; SKFB-FN-csomagkezelo-atado-szerk; SKFB-FN-csomagkezelo-atado; SKFB-Letszamjelentes-biztpub; SKFB-Ellenorzesinaplo-biztpub-iras; SKFB-eSzigno; SKFB-FN-Navigator-eloallitasnaplo; SKFB-FN-Navigator-jelentesrekotnaplo; SKFB-FN-Navigator-ellenorzesinaplo; SKFB-FN-Navigator-belepesinaplo; SKFB-FN-JFK-FEGYJUTMEGTEKINTO; SKFB-BIT-JELENTES; SKFB-FN-Navigator-ellenorzesinaplo-jovahagyo; SKFB-FN-Fegyelmi-jogkor-gyakorloja; SKFB-FN-Fegyelmi-reintegracios-tiszt; SKFB-MarathonTerra3; SKFB-NYDR; SKFB-NYDR-Reint; SKFB-FN-Navigator-bitnaplo-korletfofelugyelo; SKFB-FN-Navigator-kffenaplo-jovahagyo; SKFB-FN-Navigator-munkahelyiszolgalatinaplo-jovahagyo; SKFB-IKKB; SKFB-PR148; SKFB-FN-Navigator-bitnaplo-osztalyvezeto; SKFB-BVORG-KSZNYFO; SKFB-BVORG-F; SKFB-BVORG-G; SKFB-BVORG-M";
                     }
-                case "Büntetés-végrehajtási osztályvezető-helyettes":
+                case "Fogvatartási alosztályvezető-helyettes":
                     {
                         return "SKFB-Bv-Reintegracio; SKFB-Vezetok; SKFB-IrfanView; SKFB-Bv-Bvov; SKFB-NX-ISZM; SKFB-NX-ISZA; SKFB-Nexon; SKFB-FN-csomagoszto; SKFB-FN-nevelok; SKFB-FN-bunnyilv; SKFB-FlashEnabled; SKFB-OptenOptijus; SKFB-OptenOptijusPlussz; SKFB-FN-int-vedett; SKFB-NX-SZAB; SKFB-FTPUsers; SKFB-NexonHRpersONLINE; SKFB-FTPVedelem; SKFB-HER-Behallgatok; SKFB-FN-hivasnaplo-megtekinto; SKFB-KiemeltFogvatartottR; SKFB-VezetoiSzignalas; SKFB-Ter; SKFB-Bfb; SKFB-FN-PME-ugyintezo; SKFB-FN-PME-reintegracio; SKFB-FN-kart-adatszolgaltato; SKFB-FN-kart-ugyintezo; SKFB-FN-kart-egyeb-panasz-kivizsgalo; SKFB-FN-kart-megtekinto; SKFB-FN-bvbank-megtekinto; SKFB-FN-TELEFON-ugyintezo; SKFB-FN-SZERZODES-MEGTEKINTO; SKFB-FN-csomagkezelo-atado-szerk; SKFB-FN-csomagkezelo-atado; SKFB-Letszamjelentes-biztpub; SKFB-Ellenorzesinaplo-biztpub-iras; SKFB-eSzigno; SKFB-FN-Navigator-eloallitasnaplo; SKFB-FN-Navigator-ellenorzesinaplo; SKFB-FN-Navigator-belepesinaplo; SKFB-FN-JFK-FEGYJUTMEGTEKINTO; SKFB-BIT-JELENTES; SKFB-FN-Navigator-ellenorzesinaplo-jovahagyo; SKFB-FN-Fegyelmi-jogkor-gyakorloja; SKFB-FN-Fegyelmi-reintegracios-tiszt; SKFB-MarathonTerra3; SKFB-NYDR; SKFB-NYDR-Reint; SKFB-FN-Navigator-bitnaplo-korletfofelugyelo; SKFB-FN-Navigator-kffenaplo-jovahagyo; SKFB-FN-Navigator-munkahelyiszolgalatinaplo-jovahagyo; SKFB-IKKB; SKFB-FN-Navigator-bitnaplo-osztalyvezeto; SKFB-BVORG-F; SKFB-BVORG-G; SKFB-BVORG-M";
                     }
@@ -155,7 +143,7 @@
         {
             switch (groupName)
             {
-                case "Egészségügyi osztályvezető":
+                case "Osztályvezető":
                     {
                         return "SKFB-ForrasUsers; SKFB-Vezetok; SKFB-NX-ISZM; SKFB-Nexon; SKFB-Internet-Enabled; SKFB-FlashEnabled; SKFB-OptenOptijusPlussz; SKFB-Pictures; SKFB-NX-SZAB; SKFB-FN-EU-Sebeszet-Orvos; SKFB-FN-EU-Befogado-Orvos; SKFB-FN-EU-FoglalkozasEuFogv-Orvos; SKFB-FN-EU-AltOrvosiEllatasAll-Orvos; SKFB-FN-EU-FoglalkozasEuAll-Orvos; SKFB-FN-EU-AltOrvosiEllatasFogv-Orvos; SKFB-NexonHRpersONLINE; SKFB-VisualIxdoki; SKFB-VezetoiSzignalas; SKFB-Ter; SKFB-Eu-Egeszsegugyvez; SKFB-Bfb; SKFB-FN-PME-egeszsegugy; SKFB-FN-fogl-munkahelyvezeto; SKFB-FN-PME-pszichologia-megt; SKFB-FN-PME-egeszsegugy-megt; SKFB-ForrasDotNet; SKFB-ProDoki; SKFB-FN-SZERZODES-MEGTEKINTO; SKFB-FN-SZERZODES-SZERKESZTO; SKFB-FN-BvOrvos; SKFB-FN-EU-PszichiatriaFogv-Orvos; SKFB-Letszamjelentes-biztpub; SKFB-Ellenorzesinaplo-biztpub-iras; SKFB-FN-Navigator-eloallitasnaplo; SKFB-FN-Navigator-jelentesrekotnaplo; SKFB-FN-Navigator-ellenorzesinaplo; SKFB-FN-Navigator-belepesinaplo; SKFB-BIT-JELENTES; SKFB-FN-Fegyelmi-egyeb-szakterulet; SKFB-NYDR-Eu; SKFB-NYDR; SKFB-FN-Navigator-munkahelyiszolgalatinaplo; SKFB-FN-EU-FoglalkEUAll-Orvos; SKFB-FN-EU-AlapellatasAll-Orvos; SKFB-PR150; SKFB-PR157; SKFB-BVORG-E";
                     }
@@ -179,6 +167,14 @@
                     {
                         return "SKFB-Eu-Apolo; SKFB-ForrasUsers; SKFB-GyogyszerNyilvantartas; SKFB-NX-ISZM; SKFB-Nexon; SKFB-Internet-Enabled; SKFB-Pictures; SKFB-NX-SZAB; SKFB-FN-EU-Szemeszet-Orvos; SKFB-FN-EU-Sebeszet-Orvos; SKFB-FN-EU-Befogado-Orvos; SKFB-FN-EU-FoglalkozasEuFogv-Orvos; SKFB-FN-EU-AltOrvosiEllatasAll-Orvos; SKFB-FN-EU-FoglalkozasEuAll-Orvos; SKFB-FN-EU-AltOrvosiEllatasFogv-Orvos; SKFB-NexonHRpersONLINE; SKFB-PR28; SKFB-VisualIxdoki; SKFB-FN-PME-egeszsegugy; SKFB-FN-fogl-munkahelyvezeto; SKFB-FN-fogl-bfb-ugyintezo; SKFB-FN-PME-pszichologia-megt; SKFB-FN-PME-egeszsegugy-megt; SKFB-ForrasDotNet; SKFB-ProDoki; SKFB-FN-SZERZODES-MEGTEKINTO; SKFB-FN-SZERZODES-SZERKESZTO; SKFB-FN-EU-PszichiatriaFogv-Orvos; SKFB-FN-Navigator-munkahelyiszolgalatinaplo; SKFB-FN-EU-FoglalkEUAll-Orvos; SKFB-FN-EU-AlapellatasAll-Orvos; SKFB-PR150; SKFB-PR157";
                     }
+                case "Szakpszichológus":
+                    {
+                        return "SKFB-NX-ISZM; SKFB-Nexon; SKFB-FN-nevelok; SKFB-FN-bunnyilv; SKFB-Internet-Enabled; SKFB-NX-SZAB; SKFB-FTPUsers; SKFB-Vezkozv-Pszichologus; SKFB-Scpi; SKFB-Temperamentum; SKFB-Bortonadaptacio; SKFB-FN-EU-Psychoterapi-Orvos; SKFB-NexonHRpersONLINE; SKFB-RobotZsaruNOVA; SKFB-FN-EU-AltPszichologiaFogv-Orvos; SKFB-FN-EU-PszichologiaBefogadoFogv-Orvos; SKFB-Bfb; SKFB-FN-PME-pszichologia; SKFB-FN-PME-ugyintezo; SKFB-FN-PME-nyilvantartas; SKFB-FN-PME-reintegracio; SKFB-FN-PME-egeszsegugy; SKFB-FN-PME-bizottsag; SKFB-FN-PME-pszichologia-megt; SKFB-FN-PME-egeszsegugy-megt; SKFB-FN-PME-reintegracio-megt; SKFB-FN-PME-nyilvantartas-megt; SKFB-PR08; SKFB-FN-EU-PszichiatriaFogv-Orvos; SKFB-Ellenorzesinaplo-biztpub-olvasas; SKFB-FN-Navigator-ellenorzesinaplo; SKFB-FN-Fegyelmi-egyeb-szakterulet; SKFB-NYDR-Pszich; SKFB-NYDR; SKFB-IKKB; SKFB-PszichoProgramok; SKFB-FN-EU-PszihologiaAll-Orvos; SKFB-FN-EU-PszihologiaFogv-Orvos; SKFB-BVORG-E";
+                    }
+                case "Pszichológus":
+                    {
+                        return "SKFB-FN-nevelok; SKFB-FN-bunnyilv; SKFB-Internet-Enabled; SKFB-FTPUsers; SKFB-Vezkozv-Pszichologus; SKFB-Scpi; SKFB-Temperamentum; SKFB-Bortonadaptacio; SKFB-FN-EU-Psychoterapi-Orvos; SKFB-NexonHRpersONLINE; SKFB-PR46; SKFB-VezetoiSzignalas; SKFB-FN-EU-AltPszichologiaFogv-Orvos; SKFB-FN-EU-PszichologiaBefogadoFogv-Orvos; SKFB-Bfb; SKFB-FN-PME-pszichologia; SKFB-FN-PME-ugyintezo; SKFB-FN-PME-nyilvantartas; SKFB-FN-PME-reintegracio; SKFB-FN-PME-egeszsegugy; SKFB-FN-PME-bizottsag; SKFB-FN-PME-pszichologia-megt; SKFB-FN-PME-egeszsegugy-megt; SKFB-FN-PME-reintegracio-megt; SKFB-FN-PME-nyilvantartas-megt; SKFB-FN-EU-PszichiatriaFogv-Orvos; SKFB-FN-Navigator-ellenorzesinaplo; SKFB-FN-Fegyelmi-egyeb-szakterulet; SKFB-PszichoProgramok; SKFB-FN-EU-PszihologiaAll-Orvos; SKFB-FN-EU-PszihologiaFogv-Orvos";
+                    }
                 default:
                     {
                         return noPermissions;
@@ -186,20 +182,52 @@
             }
         }
 
-        // Gazdasági osztály csoportjainak jogosultságai
-        private static string GetGazdosztPermissions(string groupName)
+        // Gazdasági Ellátó Intézet csoport jogosultságai
+        private static string GetGEIPermissions(string groupName)
         {
             switch (groupName)
             {
-                case "Gazdasági vezető":
+                case "Informatikus":
+                    {
+                        return "SKFB-ForrasUsers; SKFB-IrfanView; SKFB-NX-ISZM; SKFB-Nexon; SKFB-Internet-Enabled; SKFB-OptenOptijus; SKFB-Pictures; SKFB-NX-SZAB; SKFB-FTPUsers; SKFB-FN-admin; SKFB-FN-ELELEM-rendsz; SKFB-NexonHRpersONLINE; SKFB-FN-hivasnaplo-megtekinto; SKFB-Info-Informatika; SKFB-NoemiHelpDesk; SKFB-VezetoiSzignalas; SKFB-ForrasDotNet; SKFB-FN-TELEFON-megtekinto; SKFB-FN-TELEFON-ugyintezo; SKFB-Reintegracio; SKFB-Letszamjelentes-biztpub; SKFB-Bizttechfejlesztes; SKFB-FN-Safe-admin; SKFB-JKR; SKFB-EDR-rogzito; SKFB-EDR-megtekinto; SKFB-FN3-Mentor; SKFB-NYDR-Inf; SKFB-NYDR; SKFB-FN-Navigator-munkahelyiszolgalatinaplo; SKFB-ISZR; SKFB-BarniPro; SKFB-PR155; SKFB-Backups; SKFB-BVORG-K; SKFB-Adatszolg-Kitolto-Informatika";
+                    }
+                case "Biztonságtechnikus":
+                    {
+                        return "SKFB-Bizt-Bizttech; SKFB-Internet-Enabled; SKFB-NexonHRpersONLINE; SKFB-PR95; SKFB-Info-Biztonsagtechnika; SKFB-FN-fogl-munkahelyvezeto; SKFB-Bizttechfejlesztes; SKFB-FN-Navigator-munkahelyiszolgalatinaplo";
+                    }
+                case "Felszer":
+                    {
+                        return "SKFB-GEI-FELSZER; SKFB-ForrasUsers; SKFB-NX-ISZM; SKFB-Nexon; SKFB-FN-csomagoszto; SKFB-FN-penzugy; SKFB-FN-targyraktaros; SKFB-Internet-Enabled; SKFB-FN-ertekkezelo; SKFB-FN-fogugykez; SKFB-FN-befog-elsolet; SKFB-FN-masodlet; SKFB-FN-okmanykezelo; SKFB-FTPUsers; SKFB-FTPIlletmeny; SKFB-NexonHRpersONLINE; SKFB-FN-talalttargy; SKFB-MobilKapcsolat; SKFB-NoemiHelpDesk; SKFB-FN-fogl-munkahelyvezeto; SKFB-FN-fogl-bfb-ugyintezo; SKFB-FN-fogl-param-szerk; SKFB-FN-fogl-munkaerogazdalkodo; SKFB-FN-fogl-kult-reint-tiszt; SKFB-ForrasDotNet; SKFB-PR122; SKFB-FN-TELEFON-ugyintezo; SKFB-FN-Navigator-munkahelyiszolgalatinaplo; SKFB-PR149; ";
+                    }
+                case "Kártérítés":
+                    {
+                        return "SKFB-GEI-KARTALANITAS; SKFB-ForrasUsers; SKFB-NX-ISZM; SKFB-Nexon; SKFB-FN-csomagoszto; SKFB-FN-penzugy; SKFB-FN-targyraktaros; SKFB-Internet-Enabled; SKFB-FN-ertekkezelo; SKFB-FN-fogugykez; SKFB-FN-befog-elsolet; SKFB-FN-masodlet; SKFB-FN-okmanykezelo; SKFB-FTPUsers; SKFB-FTPIlletmeny; SKFB-NexonHRpersONLINE; SKFB-FN-talalttargy; SKFB-MobilKapcsolat; SKFB-NoemiHelpDesk; SKFB-FN-fogl-munkahelyvezeto; SKFB-FN-fogl-bfb-ugyintezo; SKFB-FN-fogl-param-szerk; SKFB-FN-fogl-munkaerogazdalkodo; SKFB-FN-fogl-kult-reint-tiszt; SKFB-ForrasDotNet; SKFB-PR122; SKFB-FN-TELEFON-ugyintezo; SKFB-FN-Navigator-munkahelyiszolgalatinaplo; SKFB-PR149; ";
+                    }
+                case "Letét":
+                    {
+                        return "SKFB-GEI-LETET; SKFB-ForrasUsers; SKFB-NX-ISZM; SKFB-Nexon; SKFB-FN-csomagoszto; SKFB-FN-penzugy; SKFB-FN-targyraktaros; SKFB-Internet-Enabled; SKFB-FN-ertekkezelo; SKFB-FN-fogugykez; SKFB-FN-befog-elsolet; SKFB-FN-masodlet; SKFB-FN-okmanykezelo; SKFB-FTPUsers; SKFB-FTPIlletmeny; SKFB-NexonHRpersONLINE; SKFB-FN-talalttargy; SKFB-MobilKapcsolat; SKFB-NoemiHelpDesk; SKFB-FN-fogl-munkahelyvezeto; SKFB-FN-fogl-bfb-ugyintezo; SKFB-FN-fogl-param-szerk; SKFB-FN-fogl-munkaerogazdalkodo; SKFB-FN-fogl-kult-reint-tiszt; SKFB-ForrasDotNet; SKFB-PR122; SKFB-FN-TELEFON-ugyintezo; SKFB-FN-Navigator-munkahelyiszolgalatinaplo; SKFB-PR149; ";
+                    }
+                default:
+                    {
+                        return noPermissions;
+                    }
+            }
+        }
+
+        // Műszaki ellátási osztály csoportjainak jogosultságai
+        private static string GetMuszakiEllatasPermissions(string groupName)
+        {
+            switch (groupName)
+            {
+                case "Osztályvezető":
                     {
                         return "SKFB-ForrasUsers; SKFB-CafeteriaAdmin; SKFB-Gazd-Szamvitel; SKFB-Gazd-Gazdvez; SKFB-Vezetok; SKFB-IrfanView; SKFB-Abevjava; SKFB-GyogyszerNyilvantartas; SKFB-NX-ISZM; SKFB-Nexon; SKFB-Internet-Enabled; SKFB-FN-ELELEM-gazdvez; SKFB-Gazd-Muszaki; SKFB-OptenOptijusPlussz; SKFB-Pictures; SKFB-FN-gazdasagi-ov; SKFB-FTPUsers; SKFB-NexonHRpersONLINE; SKFB-FN-hivasnaplo-megtekinto; SKFB-VEZKOZV; SKFB-VezetoiSzignalas; SKFB-Ter; SKFB-Vir; SKFB-VIR-Munkaltatas-User; SKFB-FN-fogl-munkahelyvezeto; SKFB-FN-fogl-param-szerk; SKFB-FN-fogl-munkaerogazdalkodo; SKFB-ForrasDotNet; SKFB-FN-bvbank-megtekinto; SKFB-FN-SZERZODES-MEGTEKINTO; SKFB-FN-SZERZODES-SZERKESZTO; SKFB-PR29; SKFB-Tulora; SKFB-Letszamjelentes-biztpub; SKFB-Ellenorzesinaplo-biztpub-iras; SKFB-FN-Navigator-eloallitasnaplo; SKFB-FN-Navigator-jelentesrekotnaplo; SKFB-FN-Navigator-ellenorzesinaplo; SKFB-FN-Navigator-belepesinaplo; SKFB-Bizttechfejlesztes; SKFB-BIT-JELENTES; SKFB-FN-Navigator-ellenorzesinaplo-jovahagyo; SKFB-JKR; SKFB-JKR-Dashboard; SKFB-JKR-BMadmin; SKFB-NYDR-Gazd; SKFB-NYDR; SKFB-FN-Navigator-munkahelyiszolgalatinaplo; SKFB-IKKB; SKFB-Szallas; SKFB-BVORG-H; SKFB-BVORG-K; SKFB-BVORG-O; SKFB-BVORG-P; SKFB-BVORG-Q; SKFB-BVORG-R; SKFB-BVORG-S; SKFB-E-szamla";
                     }
-                case "Gazdasági osztályvezető":
+                case "Gazdasági alosztályveztő":
                     {
                         return "SKFB-ForrasUsers; SKFB-CafeteriaAdmin; SKFB-Gazd-Szamvitel; SKFB-Gazd-Gazdvez; SKFB-Vezetok; SKFB-IrfanView; SKFB-Abevjava; SKFB-GyogyszerNyilvantartas; SKFB-NX-ISZM; SKFB-Nexon; SKFB-Internet-Enabled; SKFB-FN-ELELEM-gazdvez; SKFB-OptenCeginfo; SKFB-OptenOptijusPlussz; SKFB-FN-gazdasagi-ov; SKFB-FTPUsers; SKFB-FTPIlletmeny; SKFB-FN-penzugyparamkez; SKFB-NexonHRpersONLINE; SKFB-FN-hivasnaplo-megtekinto; SKFB-VezetoiSzignalas; SKFB-Ter; SKFB-Vir; SKFB-VIR-Munkaltatas-User; SKFB-FN-fogl-munkahelyvezeto; SKFB-ForrasDotNet; SKFB-FN-bvbank-megtekinto; SKFB-Asz; SKFB-FN-SZERZODES-MEGTEKINTO; SKFB-FN-SZERZODES-SZERKESZTO; SKFB-PR16; SKFB-Ellenorzesinaplo-biztpub-olvasas; SKFB-Ellenorzesinaplo-biztpub-iras; SKFB-FN-Navigator-eloallitasnaplo; SKFB-FN-Navigator-jelentesrekotnaplo; SKFB-FN-Navigator-ellenorzesinaplo; SKFB-FN-Navigator-belepesinaplo; SKFB-KulsoEllenorzes; SKFB-BIT-JELENTES; SKFB-NYDR-Gazd; SKFB-NYDR; SKFB-IKKB; SKFB-BVORG-H; SKFB-BVORG-O; SKFB-BVORG-P; SKFB-BVORG-Q; SKFB-E-szamla";
                     }
-                case "Gazdasági osztályvezető-helyettes":
+                case "Fenntartási alosztályvezető":
                     {
                         return "SKFB-Gazd-Szamvitel; SKFB-Gazd-Gazdvez; SKFB-Vezetok; SKFB-IrfanView; SKFB-NX-ISZM; SKFB-Nexon; SKFB-Internet-Enabled; SKFB-FN-ELELEM-gazdvez; SKFB-Gazd-Muszaki; SKFB-OptenOptijusPlussz; SKFB-Pictures; SKFB-FN-gazdasagi-ov; SKFB-FTPUsers; SKFB-NexonHRpersONLINE; SKFB-VezetoiSzignalas; SKFB-Ter; SKFB-Vir; SKFB-VIR-Munkaltatas-User; SKFB-FN-fogl-munkahelyvezeto; SKFB-FN-fogl-bfb-ugyintezo; SKFB-FN-fogl-param-szerk; SKFB-FN-fogl-munkaerogazdalkodo; SKFB-FN-fogl-kult-reint-tiszt; SKFB-FN-kart-ugyintezo; SKFB-FN-kart-egyeb-panasz-kivizsgalo; SKFB-FN-kart-megtekinto; SKFB-FN-bvbank-megtekinto; SKFB-FN-SZERZODES-MEGTEKINTO; SKFB-PR02; SKFB-Ellenorzesinaplo-biztpub-iras; SKFB-FN-Navigator-eloallitasnaplo; SKFB-FN-Navigator-jelentesrekotnaplo; SKFB-FN-Navigator-ellenorzesinaplo; SKFB-FN-Navigator-belepesinaplo; SKFB-Bizttechfejlesztes; SKFB-BIT-JELENTES; SKFB-JKR; SKFB-JKR-Dashboard; SKFB-JKR-BMadmin; SKFB-NYDR-Gazd; SKFB-NYDR; SKFB-FN-Navigator-munkahelyiszolgalatinaplo; SKFB-IKKB; SKFB-Szallas; SKFB-BVORG-H; SKFB-BVORG-O; SKFB-BVORG-P; SKFB-BVORG-Q; SKFB-BVORG-S";
                     }
@@ -286,124 +314,16 @@
             }
         }
 
-        // Gazdasági társaság csoportjainak jogosultságai
-        private static string GetGazdtarsPermissions(string groupName)
-        {
-            switch (groupName)
-            {
-                case "Munkáltatási biztonsági vezető":
-                    {
-                        return "SKFB-Bizt-Biztov; SKFB-BIZT; SKFB-Vezetok; SKFB-NX-ISZM; SKFB-Nexon; SKFB-FN-nevelok; SKFB-FN-bunnyilv; SKFB-Internet-Enabled; SKFB-OptenOptijus; SKFB-Gt-Biztvez; SKFB-FTPUsers; SKFB-NexonHRpersONLINE; SKFB-KiemeltFogvatartottR; SKFB-VezetoiSzignalas; SKFB-Ter; SKFB-Vir; SKFB-VIR-Munkaltatas-User; SKFB-FN-fogl-munkahelyvezeto; SKFB-FN-fogl-bfb-ugyintezo; SKFB-FN-fogl-param-szerk; SKFB-FN-fogl-munkaerogazdalkodo; SKFB-FN-fogl-kult-reint-tiszt; SKFB-FN-TELEFON-ugyintezo; SKFB-Ellenorzesinaplo-biztpub-iras; SKFB-FN-Navigator-eloallitasnaplo; SKFB-FN-Navigator-jelentesrekotnaplo; SKFB-FN-Navigator-ellenorzesinaplo; SKFB-FN-Navigator-belepesinaplo; SKFB-BIT-JELENTES; SKFB-FN-Fegyelmi-egyeb-szakterulet; SKFB-MarathonTerra3; SKFB-FN-Navigator-ejfeli-adatszolgaltatas; SKFB-FN-Navigator-bitnaplo; SKFB-PR151; SKFB-ISZR; SKFB-PR153; SKFB-Adatszolg-Kitolto-Biztonsag";
-                    }
-                case "Biztonsági vezető":
-                    {
-                        return "SKFB-Bizt-Biztov; SKFB-Internet-Enabled; SKFB-FTPUsers; SKFB-BIZT; SKFB-FN-Navigator-ellenorzesinaplo; SKFB-PR151; SKFB-PR153";
-                    }
-                case "Titkárság":
-                    {
-                        return "SKFB-Vezetok; SKFB-Internet-Enabled; SKFB-PR30; SKFB-Gt-Titkarsag; SKFB-NexonHRpersONLINE; SKFB-Vezetoi-elfoglaltsag; SKFB-VezetoiSzignalas; SKFB-Ter; SKFB-Vir; SKFB-VIR-Munkaltatas-User; SKFB-VezetoiJelenletGT; SZOM-FN-fogl-param-szerk; SZOM-FN-fogl-munkaerogazdalkodo; SZOM-FN-fogl-munkahelyvezeto; SKFB-FN-fogl-munkahelyvezeto; SKFB-FN-fogl-param-szerk; SKFB-FN-fogl-munkaerogazdalkodo; SKFB-FN-csomagkezelo-megtekinto; SKFB-FN-csomagkezelo-szerkeszto; SKFB-FN-cikktorzskezelo-megtekinto; SKFB-Tulora; SKFB-Ellenorzesinaplo-biztpub-iras; SKFB-FN-Navigator-jelentesrekotnaplo; SKFB-FN-Navigator-ellenorzesinaplo; SKFB-FN-Navigator-belepesinaplo";
-                    }
-                case "Igazgatóság":
-                    {
-                        return "SKFB-Vezetok; SKFB-Internet-Enabled; SKFB-PR30; SKFB-Gt-Titkarsag; SKFB-NexonHRpersONLINE; SKFB-Vezetoi-elfoglaltsag; SKFB-VezetoiSzignalas; SKFB-Ter; SKFB-Vir; SKFB-VIR-Munkaltatas-User; SKFB-VezetoiJelenletGT; SZOM-FN-fogl-param-szerk; SZOM-FN-fogl-munkaerogazdalkodo; SZOM-FN-fogl-munkahelyvezeto; SKFB-FN-fogl-munkahelyvezeto; SKFB-FN-fogl-param-szerk; SKFB-FN-fogl-munkaerogazdalkodo; SKFB-FN-csomagkezelo-megtekinto; SKFB-FN-csomagkezelo-szerkeszto; SKFB-FN-cikktorzskezelo-megtekinto; SKFB-Tulora; SKFB-Ellenorzesinaplo-biztpub-iras; SKFB-FN-Navigator-jelentesrekotnaplo; SKFB-FN-Navigator-ellenorzesinaplo; SKFB-FN-Navigator-belepesinaplo";
-                    }
-                case "Tűz és munkavédelmi vezető":
-                    {
-                        return "SKFB-Internet-Enabled";
-                    }
-                case "Sales Manager":
-                    {
-                        return "SKFB-Nexon; SKFB-Internet-Enabled; SKFB-PR30; SKFB-NexonHRpersONLINE; SKFB-Kozfoglalkprog; SKFB-NoemiHelpDesk";
-                    }
-                case "Művezető":
-                    {
-                        return "SKFB-Internet-Enabled; SKFB-NexonHRpersONLINE";
-                    }
-                case "Mosodavezető":
-                    {
-                        return "SKFB-Internet-Enabled; SKFB-FN-JFK-FEGYJUTMEGTEKINTO";
-                    }
-                case "Kiemelt művezető":
-                    {
-                        return "SKFB-Internet-Enabled; SKFB-FN-fogl-munkahelyvezeto; SKFB-FN-fogl-munkaerogazdalkodo";
-                    }
-                case "Kereskedelmi vezető":
-                    {
-                        return "SKFB-Internet-Enabled";
-                    }
-                case "Gépjárművezető":
-                    {
-                        return "SKFB-Internet-Enabled; SKFB-FN-fogl-munkahelyvezeto; SKFB-FN-fogl-munkaerogazdalkodo";
-                    }
-                case "Foglalkoztatási segédelőadó":
-                    {
-                        return "SKFB-Internet-Enabled; SKFB-FTPUsers";
-                    }
-                case "Foglalkoztatási felügyelő":
-                    {
-                        return "SKFB-Internet-Enabled";
-                    }
-                case "Bolt vezető":
-                    {
-                        return "SKFB-Internet-Enabled; SKFB-FN-BOLT-BOLT1; SKFB-BOLT; SKFB-FN-BOLT-BOLTPARAMKEZ; SKFB-NoemiHelpDesk; SKFB-FN-BOLT-CIKKTORZSKEZELO; SKFB-FN-bvbank-megtekinto; SKFB-FN-csomagkezelo-megtekinto; SKFB-FN-csomagkezelo-szerkeszto; SKFB-FN-cikktorzskezelo-megtekinto; SKFB-FN-BVSHOP-KIETKEZOBOLT; SKFB-FN-KESZLETNYILVANTARTO-SZERKESZTO; SKFB-FN-KESZLETNYILVANTARTO-MEGTEKINTO; SKFB-FN-BVSHOP-ALLOMANYIBOLT; SKFB-PR160; SKFB-PR161";
-                    }
-                case "Bolti eladó":
-                    {
-                        return "SKFB-Internet-Enabled; SKFB-FN-BOLT-BOLT1; SKFB-BOLT; SKFB-FN-BOLT-BOLTPARAMKEZ; SKFB-NoemiHelpDesk; SKFB-FN-BOLT-CIKKTORZSKEZELO; SKFB-FN-bvbank-megtekinto; SKFB-FN-csomagkezelo-megtekinto; SKFB-FN-csomagkezelo-szerkeszto; SKFB-FN-cikktorzskezelo-megtekinto; SKFB-FN-BVSHOP-KIETKEZOBOLT; SKFB-FN-KESZLETNYILVANTARTO-SZERKESZTO; SKFB-FN-KESZLETNYILVANTARTO-MEGTEKINTO; SKFB-FN-BVSHOP-ALLOMANYIBOLT; SKFB-PR160; SKFB-PR161";
-                    }
-                case "Logisztikai előadó":
-                    {
-                        return "SKFB-Internet-Enabled";
-                    }
-                case "Számvíteli előadó":
-                    {
-                        return "SKFB-Internet-Enabled; SKFB-VezetoiSzignalas";
-                    }
-                case "Ápoló":
-                    {
-                        return "SKFB-Internet-Enabled; SKFB-Pictures; SKFB-FN-EU-FoglalkozasEuFogv-Orvos; SKFB-FN-EU-FoglalkozasEuAll-Orvos; SKFB-EU; SKFB-FN-EU-FoglalkEUAll-Orvos";
-                    }
-                default:
-                    {
-                        return noPermissions;
-                    }
-            }
-        }
-
-        // Informatikai osztály csoportjainak jogosultságai
-        private static string GetInfoPermissions(string groupName)
-        {
-            switch (groupName)
-            {
-                case "Informatikai osztályvezető":
-                    {
-                        return "SKFB-Info-Infovez; SKFB-Vezetok; SKFB-IrfanView; SKFB-Abevjava; SKFB-Internet-Enabled; SKFB-Napijelentes; SKFB-Pictures; SKFB-FTPUsers; SKFB-FTPIlletmeny; SKFB-FN-admin; SKFB-FN-konyvelo; SKFB-NexonHRpersONLINE; SKFB-FTPVedelem; SKFB-FN-hivasnaplo-megtekinto; SKFB-MobilKapcsolat; SKFB-Info-Informatika; SKFB-RobotZsaruNOVA; SKFB-NoemiHelpDesk; SKFB-VezetoiSzignalas; SKFB-FN-kart-ugyintezo; SKFB-FN-kart-egyeb-panasz-kivizsgalo; SKFB-FN-kart-megtekinto; SKFB-FN-TELEFON-megtekinto; SKFB-FN-TELEFON-ugyintezo; SKFB-Reintegracio; SKFB-Abevupdate; SKFB-Letszamjelentes-biztpub; SKFB-Ellenorzesinaplo-biztpub-olvasas; SKFB-Ellenorzesinaplo-biztpub-iras; SKFB-eSzigno; SKFB-FN-Navigator-eloallitasnaplo; SKFB-FN-Navigator-jelentesrekotnaplo; SKFB-FN-Navigator-ellenorzesinaplo; SKFB-FN-Navigator-belepesinaplo; SKFB-Bizttechfejlesztes; SKFB-FN-Safe-admin; SKFB-FN-JFK-FEGYJUTMEGTEKINTO; SKFB-BIT-JELENTES; SKFB-FTPSzamfejtes; SKFB-FN-Idorend-megtekinto; SKFB-EDR-rogzito; SKFB-EDR-megtekinto; SKFB-FN-Navigator-korletfelugyeloiellenorzesinaplo; SKFB-NYDR-Inf; SKFB-NYDR; SKFB-FN-Navigator-korletfelugyeloiellenorzesinaplo-jovahagyo; SKFB-FN-Navigator-munkahelyiszolgalatinaplo-jovahagyo; SKFB-FN-Navigator-munkahelyiszolgalatinaplo; SKFB-IKKB; SKFB-ISZR; SKFB-BarniPro; SKFB-PR155; SKFB-Backups; SKFB-Zabbix; SKFB-Advanced-IP-Scanner; SKFB-KameraFelvetelek; SKFB-IntranetAdatszolgaltatasLetrehozo; SKFB-IntranetAdatszolgaltatasKitolto; SKFB-BVORG-K; SKFB-E-szamla; SKFB-Adatszolg-Kitolto-Informatika";
-                    }
-                case "Informatikai főelőadó":
-                    {
-                        return "SKFB-ForrasUsers; SKFB-IrfanView; SKFB-Abevjava; SKFB-NX-ISZM; SKFB-Nexon; SKFB-Internet-Enabled; SKFB-Napijelentes; SKFB-OptenOptijus; SKFB-Pictures; SKFB-NX-SZAB; SKFB-FTPUsers; SKFB-FN-admin; SKFB-FN-ELELEM-rendsz; SKFB-NexonHRpersONLINE; SKFB-FN-hivasnaplo-megtekinto; SKFB-MobilKapcsolat; SKFB-Elelmezes; SKFB-Info-Informatika; SKFB-NoemiHelpDesk; SKFB-ForrasDotNet; SKFB-FN-TELEFON-megtekinto; SKFB-FN-TELEFON-ugyintezo; SKFB-Reintegracio; SKFB-Abevupdate; SKFB-Letszamjelentes-biztpub; SKFB-eSzigno; SKFB-FN-Navigator-belepesinaplo; SKFB-Bizttechfejlesztes; SKFB-FN-Safe-admin; SKFB-BIT-JELENTES; SKFB-JKR; SKFB-JKR-Dashboard; SKFB-JKR-BMadmin; SKFB-EDR-rogzito; SKFB-EDR-megtekinto; SKFB-FN3-Mentor; SKFB-NYDR-Inf; SKFB-NYDR; SKFB-FN-Navigator-bitnaplo; SKFB-FN-Navigator-munkahelyiszolgalatinaplo; SKFB-FN-Navigator-bitnaplo-osztalyvezeto; SKFB-ISZR; SKFB-Putty; SKFB-BarniPro; SKFB-PR155; SKFB-Backups; SKFB-Zabbix; SKFB-Advanced-IP-Scanner; SKFB-KameraFelvetelek; SKFB-IntranetAdatszolgaltatasLetrehozo; SKFB-IntranetAdatszolgaltatasKitolto; SKFB-BVORG-K; SKFB-Adatszolg-Kitolto-Informatika";
-                    }
-                case "Informatikai előadó":
-                    {
-                        return "SKFB-ForrasUsers; SKFB-IrfanView; SKFB-NX-ISZM; SKFB-Nexon; SKFB-Internet-Enabled; SKFB-OptenOptijus; SKFB-Pictures; SKFB-NX-SZAB; SKFB-FTPUsers; SKFB-FN-admin; SKFB-FN-ELELEM-rendsz; SKFB-NexonHRpersONLINE; SKFB-FN-hivasnaplo-megtekinto; SKFB-Info-Informatika; SKFB-NoemiHelpDesk; SKFB-VezetoiSzignalas; SKFB-ForrasDotNet; SKFB-FN-TELEFON-megtekinto; SKFB-FN-TELEFON-ugyintezo; SKFB-Reintegracio; SKFB-Letszamjelentes-biztpub; SKFB-Bizttechfejlesztes; SKFB-FN-Safe-admin; SKFB-JKR; SKFB-EDR-rogzito; SKFB-EDR-megtekinto; SKFB-FN3-Mentor; SKFB-NYDR-Inf; SKFB-NYDR; SKFB-FN-Navigator-munkahelyiszolgalatinaplo; SKFB-ISZR; SKFB-BarniPro; SKFB-PR155; SKFB-Backups; SKFB-BVORG-K; SKFB-Adatszolg-Kitolto-Informatika";
-                    }
-                case "Biztonságtechnikus":
-                    {
-                        return "SKFB-Bizt-Bizttech; SKFB-Internet-Enabled; SKFB-NexonHRpersONLINE; SKFB-PR95; SKFB-Info-Biztonsagtechnika; SKFB-FN-fogl-munkahelyvezeto; SKFB-Bizttechfejlesztes; SKFB-FN-Navigator-munkahelyiszolgalatinaplo";
-                    }
-                default:
-                    {
-                        return noPermissions;
-                    }
-            }
-        }
-
         // Személyügy csoportjainak jogosultságai
         private static string GetSzemPermissions(string groupName)
         {
             switch (groupName)
             {
-                case "Személyügyi osztályvezető":
+                case "Osztályvezető":
+                    {
+                        return "SKFB-Szem-Szemvez; SKFB-Szem-Szemelyugy; SKFB-Vezetok; SKFB-IrfanView; SKFB-NX-ISZM; SKFB-NX-IHRV; SKFB-Nexon; SKFB-Internet-Enabled; SKFB-NX-IITA; SKFB-OptenCeginfo; SKFB-OptenOptijusPlussz; SKFB-Pictures; SKFB-NX-SZAB; SKFB-FTPUsers; SKFB-NexonHRpersONLINE; SKFB-PR83; SKFB-Kozfoglalkprog; SKFB-VezetoiSzignalas; SKFB-Ter; SKFB-Toborzas; SKFB-Ugyfelkapu; SKFB-Szenyor; SKFB-FN-SZERZODES-MEGTEKINTO; SKFB-FN-SZERZODES-SZERKESZTO; SKFB-Letszamjelentes-biztpub; SKFB-Ellenorzesinaplo-biztpub-iras; SKFB-FN-Navigator-eloallitasnaplo; SKFB-FN-Navigator-jelentesrekotnaplo; SKFB-FN-Navigator-ellenorzesinaplo; SKFB-FN-Navigator-belepesinaplo; SKFB-NYDR-Human; SKFB-NYDR; SKFB-IKKB; SKFB-PR147; SKFB-ISZR; SKFB-Human-Igazolas; SKFB-BVORG-I; SKFB-BVORG-J; SKFB-BVORG-P";
+                    }
+                case "Személyügyi alosztályvezető":
                     {
                         return "SKFB-Szem-Szemvez; SKFB-Szem-Szemelyugy; SKFB-Vezetok; SKFB-IrfanView; SKFB-NX-ISZM; SKFB-NX-IHRV; SKFB-Nexon; SKFB-Internet-Enabled; SKFB-NX-IITA; SKFB-OptenCeginfo; SKFB-OptenOptijusPlussz; SKFB-Pictures; SKFB-NX-SZAB; SKFB-FTPUsers; SKFB-NexonHRpersONLINE; SKFB-PR83; SKFB-Kozfoglalkprog; SKFB-VezetoiSzignalas; SKFB-Ter; SKFB-Toborzas; SKFB-Ugyfelkapu; SKFB-Szenyor; SKFB-FN-SZERZODES-MEGTEKINTO; SKFB-FN-SZERZODES-SZERKESZTO; SKFB-Letszamjelentes-biztpub; SKFB-Ellenorzesinaplo-biztpub-iras; SKFB-FN-Navigator-eloallitasnaplo; SKFB-FN-Navigator-jelentesrekotnaplo; SKFB-FN-Navigator-ellenorzesinaplo; SKFB-FN-Navigator-belepesinaplo; SKFB-NYDR-Human; SKFB-NYDR; SKFB-IKKB; SKFB-PR147; SKFB-ISZR; SKFB-Human-Igazolas; SKFB-BVORG-I; SKFB-BVORG-J; SKFB-BVORG-P";
                     }
@@ -418,6 +338,10 @@
                 case "Személyügyi segédelőadó":
                     {
                         return "SKFB-CafeteriaAdmin; SKFB-Szem-Szemelyugy; SKFB-Szem-Ugykezelo; SKFB-Futar; SKFB-NX-ISZM; SKFB-NX-IHRM; SKFB-NX-IHRV; SKFB-Nexon; SKFB-Internet-Enabled; SKFB-Napijelentes; SKFB-FTPUsers; SKFB-FTPIlletmeny; SKFB-NexonHRpersONLINE; SKFB-Vezetoi-elfoglaltsag; SKFB-PR83; SKFB-VezetoiSzignalas; SKFB-Ugyfelkapu; SKFB-Szenyor; SKFB-PR147; SKFB-BVORG-J";
+                    }
+                case "Titkársági alosztályvezető":
+                    {
+                        return "SKFB-Szem-Szemvez; SKFB-Szem-Szemelyugy; SKFB-Vezetok; SKFB-IrfanView; SKFB-NX-ISZM; SKFB-NX-IHRV; SKFB-Nexon; SKFB-Internet-Enabled; SKFB-NX-IITA; SKFB-OptenCeginfo; SKFB-OptenOptijusPlussz; SKFB-Pictures; SKFB-NX-SZAB; SKFB-FTPUsers; SKFB-NexonHRpersONLINE; SKFB-PR83; SKFB-Kozfoglalkprog; SKFB-VezetoiSzignalas; SKFB-Ter; SKFB-Toborzas; SKFB-Ugyfelkapu; SKFB-Szenyor; SKFB-FN-SZERZODES-MEGTEKINTO; SKFB-FN-SZERZODES-SZERKESZTO; SKFB-Letszamjelentes-biztpub; SKFB-Ellenorzesinaplo-biztpub-iras; SKFB-FN-Navigator-eloallitasnaplo; SKFB-FN-Navigator-jelentesrekotnaplo; SKFB-FN-Navigator-ellenorzesinaplo; SKFB-FN-Navigator-belepesinaplo; SKFB-NYDR-Human; SKFB-NYDR; SKFB-IKKB; SKFB-PR147; SKFB-ISZR; SKFB-Human-Igazolas; SKFB-BVORG-I; SKFB-BVORG-J; SKFB-BVORG-P";
                     }
                 case "Ügykezelő":
                     {
@@ -527,14 +451,6 @@
                     {
                         return "SKFB-FN-nevelok; SKFB-Internet-Enabled; SKFB-FTPUsers; SKFB-NexonHRpersONLINE; SKFB-FN-fogl-munkahelyvezeto; SKFB-FN-fogl-kult-reint-tiszt; SKFB-PR94; SKFB-Vezkozv-Lelkesz; SKFB-FN-Fegyelmi-egyeb-szakterulet";
                     }
-                case "Szakpszichológus":
-                    {
-                        return "SKFB-NX-ISZM; SKFB-Nexon; SKFB-FN-nevelok; SKFB-FN-bunnyilv; SKFB-Internet-Enabled; SKFB-NX-SZAB; SKFB-FTPUsers; SKFB-Vezkozv-Pszichologus; SKFB-Scpi; SKFB-Temperamentum; SKFB-Bortonadaptacio; SKFB-FN-EU-Psychoterapi-Orvos; SKFB-NexonHRpersONLINE; SKFB-RobotZsaruNOVA; SKFB-FN-EU-AltPszichologiaFogv-Orvos; SKFB-FN-EU-PszichologiaBefogadoFogv-Orvos; SKFB-Bfb; SKFB-FN-PME-pszichologia; SKFB-FN-PME-ugyintezo; SKFB-FN-PME-nyilvantartas; SKFB-FN-PME-reintegracio; SKFB-FN-PME-egeszsegugy; SKFB-FN-PME-bizottsag; SKFB-FN-PME-pszichologia-megt; SKFB-FN-PME-egeszsegugy-megt; SKFB-FN-PME-reintegracio-megt; SKFB-FN-PME-nyilvantartas-megt; SKFB-PR08; SKFB-FN-EU-PszichiatriaFogv-Orvos; SKFB-Ellenorzesinaplo-biztpub-olvasas; SKFB-FN-Navigator-ellenorzesinaplo; SKFB-FN-Fegyelmi-egyeb-szakterulet; SKFB-NYDR-Pszich; SKFB-NYDR; SKFB-IKKB; SKFB-PszichoProgramok; SKFB-FN-EU-PszihologiaAll-Orvos; SKFB-FN-EU-PszihologiaFogv-Orvos; SKFB-BVORG-E";
-                    }
-                case "Pszichológus":
-                    {
-                        return "SKFB-FN-nevelok; SKFB-FN-bunnyilv; SKFB-Internet-Enabled; SKFB-FTPUsers; SKFB-Vezkozv-Pszichologus; SKFB-Scpi; SKFB-Temperamentum; SKFB-Bortonadaptacio; SKFB-FN-EU-Psychoterapi-Orvos; SKFB-NexonHRpersONLINE; SKFB-PR46; SKFB-VezetoiSzignalas; SKFB-FN-EU-AltPszichologiaFogv-Orvos; SKFB-FN-EU-PszichologiaBefogadoFogv-Orvos; SKFB-Bfb; SKFB-FN-PME-pszichologia; SKFB-FN-PME-ugyintezo; SKFB-FN-PME-nyilvantartas; SKFB-FN-PME-reintegracio; SKFB-FN-PME-egeszsegugy; SKFB-FN-PME-bizottsag; SKFB-FN-PME-pszichologia-megt; SKFB-FN-PME-egeszsegugy-megt; SKFB-FN-PME-reintegracio-megt; SKFB-FN-PME-nyilvantartas-megt; SKFB-FN-EU-PszichiatriaFogv-Orvos; SKFB-FN-Navigator-ellenorzesinaplo; SKFB-FN-Fegyelmi-egyeb-szakterulet; SKFB-PszichoProgramok; SKFB-FN-EU-PszihologiaAll-Orvos; SKFB-FN-EU-PszihologiaFogv-Orvos";
-                    }
                 case "Parancsnok titkárnő":
                     {
                         return "SKFB-Vezetok; SKFB-NX-ISZM; SKFB-Nexon; SKFB-Internet-Enabled; SKFB-Napijelentes; SKFB-NX-SZAB; SKFB-FTPUsers; SKFB-NexonHRpersONLINE; SKFB-Scan-Pk; SKFB-Vezetoi-elfoglaltsag; SKFB-Parancsnok; SKFB-VezetoiJelenlet; SKFB-Tulora; SKFB-Letszamjelentes-biztpub; SKFB-Ellenorzesinaplo-biztpub-olvasas; SKFB-PR152; SKFB-ISZR; SKFB-Parancsnok-Titkarno; SKFB-BVORG-D";
@@ -555,39 +471,27 @@
         {
             switch (specialityName)
             {
-                case "Biztonsági osztály":
+                case "Biztonsági és fogvatartási ügyek osztálya":
                     {
-                        return GetBiztPermissions(groupName);
-                    }
-                case "Büntetés - végrehajtási osztály":
-                    {
-                        return GetBVPermissions(groupName);
+                        return GetBiztAndBVPermissions(groupName);
                     }
                 case "EFOP":
                     {
                         return GetEFOPPermissions(groupName);
                     }
-                case "Egészségügyi osztály":
+                case "Egészségügyi és pszichológiai osztály":
                     {
                         return GetEUPermissions(groupName);
                     }
-                case "Gazdasági osztály":
+                case "Gazdasági Ellátó Intézet":
                     {
-                        return GetGazdosztPermissions(groupName);
+                        return GetGEIPermissions(groupName);
                     }
-                case "Gazdatási társaság":
+                case "Műszaki ellátási osztály":
                     {
-                        return GetGazdtarsPermissions(groupName);
+                        return GetMuszakiEllatasPermissions(groupName);
                     }
-                case "Informatikai osztály":
-                    {
-                        return GetInfoPermissions(groupName);
-                    }
-                case "Nemzeti Védelmi Szolgálat":
-                    {
-                        return GetNVSZPermissions(groupName);
-                    }
-                case "Személyügyi és szociális osztály":
+                case "Személyügyi és titkársági osztály":
                     {
                         return GetSzemPermissions(groupName);
                     }
@@ -595,13 +499,17 @@
                     {
                         return GetUgyeszPermissions(groupName);
                     }
+                case "Nemzeti Védelmi Szolgálat":
+                    {
+                        return GetNVSZPermissions(groupName);
+                    }
+                case "Vezetői törzs":
+                    {
+                        return GetVezetokPermissions(groupName);
+                    }
                 case "Vezetői közvetlen":
                     {
                         return GetVezkozvPermissions(groupName);
-                    }
-                case "Vezetőség":
-                    {
-                        return GetVezetokPermissions(groupName);
                     }
                 default:
                     {

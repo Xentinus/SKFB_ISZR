@@ -191,7 +191,7 @@ namespace SKFB_ISZR
             // Adatok elküldése a Documentum szerkeztőnek
             DocumentEditor.lastName = checkLastNameText.Text;
             DocumentEditor.firstName = checkFirstNameText.Text;
-            DocumentEditor.rank = RankConverter.GetShortRank(checkRankText.Text);
+            DocumentEditor.rank = RankConverter.Short(checkRankText.Text);
             DocumentEditor.username = checkUsernameText.Text;
             DocumentEditor.specialty = checkSpecialtyText.Text;
             DocumentEditor.post = checkPostText.Text;
@@ -210,7 +210,7 @@ namespace SKFB_ISZR
 
                 // Dokumentum elkésítésének sikerességének megjelenítése
                 LoadingSave.fileSavedTitle.Text = "Fájl mentése sikeresen befejezödött";
-                LoadingSave.fileSavedInfo.Text = "A generált fájl mostmár robotzsaruzható az 5-ös főszámon";
+                LoadingSave.fileSavedInfo.Text = "A generált fájl mostmár robotzsaruzható";
             }
             catch
             {

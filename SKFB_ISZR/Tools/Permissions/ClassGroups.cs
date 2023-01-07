@@ -3,25 +3,26 @@
 namespace SKFB_ISZR.Tools.Permissions
 {
     // Szakterületi alcsoportok importálása
-    internal class SpecialityGroups
+    internal class ClassGroups
     {
         // Központi combobox
         public static ComboBox specialityGroups = new ComboBox();
 
+        // Osztályok
         /*
-        Biztonsági osztály
-        Büntetés-végrehajtási osztály
-        EFOP
-        Egészségügyi osztály
-        Gazdasági osztály
-        Gazdasági társaság
-        Informatikai osztály
-        Nemzeti Védelmi Szolgálat
-        Személyügyi és szociális osztály
-        Ügyészség
-        Vezetői közvetlen
-        Vezetőség
-        */
+         * Biztonsági és fogvatartási ügyek osztálya
+         * EFOP
+         * Egészségügyi és pszichológiai osztály
+         * Gazdasági Ellátó Intézet
+         * Humánpolitikai osztály
+         * Ipari, termelési, logisztikai és üzemfenntartási osztály
+         * Kereskedelmi és ruhaipari osztály
+         * Minőségellenőrzési osztály
+         * Műszaki ellátási osztály
+         * Személyügyi és titkársági osztály
+         * Vezetői közvetlen
+         * Vezetői törzs
+         */
 
         // Combobox módosítása
         public static void GetGroups(string speciality)
@@ -30,10 +31,11 @@ namespace SKFB_ISZR.Tools.Permissions
 
             switch (speciality)
             {
-                case "Biztonsági osztály":
+                case "Biztonsági és fogvatartási ügyek osztálya":
                     {
-                        specialityGroups.Items.Add("Biztonsági osztályvezető");
-                        specialityGroups.Items.Add("Biztonsági osztályvezető-helyettes");
+                        // Biztonsági
+                        specialityGroups.Items.Add("Osztályvezető");
+                        specialityGroups.Items.Add("Biztonsági alosztályvezető");
                         specialityGroups.Items.Add("Biztonsági tiszt");
                         specialityGroups.Items.Add("Biztonsági főfelügyelő");
                         specialityGroups.Items.Add("Biztonsági felügyelő");
@@ -41,17 +43,14 @@ namespace SKFB_ISZR.Tools.Permissions
                         specialityGroups.Items.Add("Kutyatelep-vezető");
                         specialityGroups.Items.Add("Kutyavezető");
                         specialityGroups.Items.Add("Fegyvermester");
-                        specialityGroups.Items.Add("Segédelőadó");
-                        specialityGroups.Items.Add("Előadó");
+                        specialityGroups.Items.Add("Biztonsági segédelőadó");
+                        specialityGroups.Items.Add("Biztonsági előadó");
                         specialityGroups.Items.Add("Körlet felügyelő");
                         specialityGroups.Items.Add("Körlet főfelügyelő");
                         specialityGroups.Items.Add("Műveleti főfelügyelő");
-                        break;
-                    }
-                case "Büntetés-végrehajtási osztály":
-                    {
-                        specialityGroups.Items.Add("Büntetés-végrehajtási osztályvezető");
-                        specialityGroups.Items.Add("Büntetés-végrehajtási osztályvezető-helyettes");
+                        // Fogvatartási
+                        specialityGroups.Items.Add("Fogvatartási alosztályvezető");
+                        specialityGroups.Items.Add("Fogvatartási alosztályvezető-helyettes");
                         specialityGroups.Items.Add("Nyilvántartó főelőadó");
                         specialityGroups.Items.Add("Nyilvántartó előadó");
                         specialityGroups.Items.Add("Nyilvántartó segédelőadó");
@@ -69,21 +68,51 @@ namespace SKFB_ISZR.Tools.Permissions
                         specialityGroups.Items.Add("Pályázati tanácsadó");
                         break;
                     }
-                case "Egészségügyi osztály":
+                case "Egészségügyi és pszichológiai osztály":
                     {
-                        specialityGroups.Items.Add("Egészségügyi osztályvezető");
+                        specialityGroups.Items.Add("Osztályvezető");
                         specialityGroups.Items.Add("Főápoló");
                         specialityGroups.Items.Add("Orvos");
                         specialityGroups.Items.Add("Orvos asszisztens");
                         specialityGroups.Items.Add("Szakápoló");
                         specialityGroups.Items.Add("Előadó");
+                        specialityGroups.Items.Add("Szakpszichológus");
+                        specialityGroups.Items.Add("Pszichológus");
                         break;
                     }
-                case "Gazdasági osztály":
+                case "Gazdasági Ellátó Intézet":
                     {
-                        specialityGroups.Items.Add("Gazdasági vezető");
-                        specialityGroups.Items.Add("Gazdasági osztályvezető");
-                        specialityGroups.Items.Add("Gazdasági osztályvezető-helyettes");
+                        specialityGroups.Items.Add("Informatikus");
+                        specialityGroups.Items.Add("Biztonságtechnikus");
+                        specialityGroups.Items.Add("Felszer");
+                        specialityGroups.Items.Add("Kártérítés");
+                        specialityGroups.Items.Add("Letét");
+                        break;
+                    }
+                case "Humánpolitikai osztály":
+                    {
+                        specialityGroups.Items.Add("-");
+                        break;
+                    }
+                case "Ipari, termelési, logisztikai és üzemfenntartási osztály":
+                    {
+                        specialityGroups.Items.Add("-");
+                        break;
+                    }
+                case "Kereskedelmi és ruhaipari osztály":
+                    {
+                        specialityGroups.Items.Add("-");
+                        break;
+                    }
+                case "Minőségellenőrzési osztály":
+                    {
+                        specialityGroups.Items.Add("-");
+                        break;
+                    }
+                case "Műszaki ellátási osztály":
+                    {
+                        specialityGroups.Items.Add("Osztályvezető");
+                        specialityGroups.Items.Add("Gazdasági alosztályveztő");
                         specialityGroups.Items.Add("Gépház műhelyvezető");
                         specialityGroups.Items.Add("Gépház foglalkoztatási segédelőadó");
                         specialityGroups.Items.Add("Élelmezésvezető");
@@ -103,44 +132,18 @@ namespace SKFB_ISZR.Tools.Permissions
                         specialityGroups.Items.Add("Számviteli előadó");
                         specialityGroups.Items.Add("Gondnok");
                         specialityGroups.Items.Add("Takarító");
+                        specialityGroups.Items.Add("Fenntartási alosztályvezető"); //KZ
                         break;
                     }
-                case "Gazdasági társaság":
+                case "Személyügyi és titkársági osztály":
                     {
-                        specialityGroups.Items.Add("Munkáltatási biztonsági vezető");
-                        specialityGroups.Items.Add("Biztonsági vezető");
-                        specialityGroups.Items.Add("Titkárság");
-                        specialityGroups.Items.Add("Igazgatóság");
-                        specialityGroups.Items.Add("Tűz és munkavédelmi vezető");
-                        specialityGroups.Items.Add("Sales Manager");
-                        specialityGroups.Items.Add("Művezető");
-                        specialityGroups.Items.Add("Mosodavezető");
-                        specialityGroups.Items.Add("Kiemelt művezető");
-                        specialityGroups.Items.Add("Kereskedelmi vezető");
-                        specialityGroups.Items.Add("Gépjárművezető");
-                        specialityGroups.Items.Add("Foglalkoztatási segédelőadó");
-                        specialityGroups.Items.Add("Foglalkoztatási felügyelő");
-                        specialityGroups.Items.Add("Bolt vezető");
-                        specialityGroups.Items.Add("Bolti eladó");
-                        specialityGroups.Items.Add("Logisztikai előadó");
-                        specialityGroups.Items.Add("Számvíteli előadó");
-                        specialityGroups.Items.Add("Ápoló");
-                        break;
-                    }
-                case "Informatikai osztály":
-                    {
-                        specialityGroups.Items.Add("Informatikai osztályvezető");
-                        specialityGroups.Items.Add("Informatikai főelőadó");
-                        specialityGroups.Items.Add("Informatikai előadó");
-                        specialityGroups.Items.Add("Biztonságtechnikus");
-                        break;
-                    }
-                case "Személyügyi és szociális osztály":
-                    {
-                        specialityGroups.Items.Add("Személyügyi osztályvezető");
+                        // Személyügyi
+                        specialityGroups.Items.Add("Osztályvezető");
                         specialityGroups.Items.Add("Személyügyi főelőadó");
                         specialityGroups.Items.Add("Személyügyi előadó");
                         specialityGroups.Items.Add("Személyügyi segédelőadó");
+                        // Titkárság
+                        specialityGroups.Items.Add("Titkársági alosztályvezető");
                         specialityGroups.Items.Add("Ügykezelő");
                         break;
                     }
@@ -157,7 +160,7 @@ namespace SKFB_ISZR.Tools.Permissions
                         specialityGroups.Items.Add("Előadó");
                         break;
                     }
-                case "Vezetőség":
+                case "Vezetői törzs":
                     {
                         specialityGroups.Items.Add("Parancsnok");
                         specialityGroups.Items.Add("Parancsnok helyettes");
@@ -172,8 +175,6 @@ namespace SKFB_ISZR.Tools.Permissions
                         specialityGroups.Items.Add("Belső ellenőr");
                         specialityGroups.Items.Add("Jogtanácsos");
                         specialityGroups.Items.Add("Lelkész");
-                        specialityGroups.Items.Add("Szakpszichológus");
-                        specialityGroups.Items.Add("Pszichológus");
                         specialityGroups.Items.Add("Parancsnok titkárnő");
                         specialityGroups.Items.Add("Előadó");
                         break;

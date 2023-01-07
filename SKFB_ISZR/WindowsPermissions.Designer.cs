@@ -392,18 +392,18 @@ namespace SKFB_ISZR
             this.specialtyText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
             this.specialtyText.FormattingEnabled = true;
             this.specialtyText.Items.AddRange(new object[] {
-            "Biztonsági osztály",
-            "Büntetés-végrehajtási osztály",
+            "Biztonsági és fogvatartási ügyek osztálya",
             "EFOP",
-            "Egészségügyi osztály",
-            "Gazdasági osztály",
-            "Gazdasági társaság",
-            "Informatikai osztály",
-            "Nemzeti Védelmi Szolgálat",
-            "Személyügyi és szociális osztály",
-            "Ügyészség",
+            "Egészségügyi és pszichológiai osztály",
+            "Gazdasági Ellátó Intézet",
+            "Humánpolitikai osztály",
+            "Ipari, termelési, logisztikai és üzemfenntartási osztály",
+            "Kereskedelmi és ruhaipari osztály",
+            "Minőségellenőrzési osztály",
+            "Műszaki ellátási osztály",
+            "Személyügyi és titkársági osztály",
             "Vezetői közvetlen",
-            "Vezetőség"});
+            "Vezetői törzs"});
             this.specialtyText.Location = new System.Drawing.Point(135, 177);
             this.specialtyText.Name = "specialtyText";
             this.specialtyText.Size = new System.Drawing.Size(349, 29);
@@ -673,6 +673,7 @@ namespace SKFB_ISZR
             "Belsőellenőr tudástár",
             "BFB",
             "Bit jelentés",
+            "Biztonsági adatszolgáltatás kitöltő",
             "Biztonsági mentések megtekintése",
             "Biztonsági osztály Belső mappa",
             "Biztonsági osztály Osztályvezetői mappa",
@@ -706,7 +707,8 @@ namespace SKFB_ISZR
             "BVORG O_KOZBESZ ES PROJECT FO",
             "BVORG P_KOZGAZD FO",
             "BVORG Q_KOZP ELL FO",
-            "BVORG R_MEF",
+            "BVORG R_KSZNYFO",
+            "BVORG S_MEF",
             "BVORG Számfejtés",
             "Cafeteria",
             "Cafeteria adminisztrátor",
@@ -754,6 +756,7 @@ namespace SKFB_ISZR
             "Gazdasági osztály szolgálati jegy olvasása és írása",
             "Gyógyszer nyilvántartó",
             "IKKB",
+            "Informatikai adatszolgáltatás kitöltő",
             "Informatikai eszköznyíltántartás",
             "Informatikai osztály Belső mappa",
             "Informatikai osztály Osztályvezetői mappa",
@@ -764,6 +767,7 @@ namespace SKFB_ISZR
             "JFK",
             "JKR",
             "JKR adminisztrátor",
+            "Jogi adatszolgálatás kitöltő",
             "Kárbejelentő",
             "Kártalanítási adatszolgálató",
             "Kártalanítási eljárásokba betekintő",
@@ -850,6 +854,8 @@ namespace SKFB_ISZR
             "QB-Élelem - Rendszergazda",
             "Reintegrációs őrízet",
             "Reintegrációs tiszti fegyelmi modul",
+            "Rendezvény adatszolgálatás kitöltő",
+            "RIN EFOP",
             "RobotZsaru NEO",
             "RobotZsaru NOVA",
             "RobotZsaru Sajtó",
@@ -859,6 +865,7 @@ namespace SKFB_ISZR
             "Scan - BV osztály",
             "Scan - EFOP",
             "Scan - Egészségügyi osztály",
+            "Scan - Gazdasági Ellátó Intézet",
             "Scan - Gazdasági osztály",
             "Scan - Gazdasági társaság",
             "Scan - Informatikai osztály",
@@ -1478,6 +1485,7 @@ namespace SKFB_ISZR
             "Belsőellenőr tudástár",
             "BFB",
             "Bit jelentés",
+            "Biztonsági adatszolgáltatás kitöltő",
             "Biztonsági mentések megtekintése",
             "Biztonsági osztály Belső mappa",
             "Biztonsági osztály Osztályvezetői mappa",
@@ -1511,7 +1519,8 @@ namespace SKFB_ISZR
             "BVORG O_KOZBESZ ES PROJECT FO",
             "BVORG P_KOZGAZD FO",
             "BVORG Q_KOZP ELL FO",
-            "BVORG R_MEF",
+            "BVORG R_KSZNYFO",
+            "BVORG S_MEF",
             "BVORG Számfejtés",
             "Cafeteria",
             "Cafeteria adminisztrátor",
@@ -1559,6 +1568,7 @@ namespace SKFB_ISZR
             "Gazdasági osztály szolgálati jegy olvasása és írása",
             "Gyógyszer nyilvántartó",
             "IKKB",
+            "Informatikai adatszolgáltatás kitöltő",
             "Informatikai eszköznyíltántartás",
             "Informatikai osztály Belső mappa",
             "Informatikai osztály Osztályvezetői mappa",
@@ -1569,6 +1579,7 @@ namespace SKFB_ISZR
             "JFK",
             "JKR",
             "JKR adminisztrátor",
+            "Jogi adatszolgálatás kitöltő",
             "Kárbejelentő",
             "Kártalanítási adatszolgálató",
             "Kártalanítási eljárásokba betekintő",
@@ -1655,6 +1666,8 @@ namespace SKFB_ISZR
             "QB-Élelem - Rendszergazda",
             "Reintegrációs őrízet",
             "Reintegrációs tiszti fegyelmi modul",
+            "Rendezvény adatszolgálatás kitöltő",
+            "RIN EFOP",
             "RobotZsaru NEO",
             "RobotZsaru NOVA",
             "RobotZsaru Sajtó",
@@ -1664,6 +1677,7 @@ namespace SKFB_ISZR
             "Scan - BV osztály",
             "Scan - EFOP",
             "Scan - Egészségügyi osztály",
+            "Scan - Gazdasági Ellátó Intézet",
             "Scan - Gazdasági osztály",
             "Scan - Gazdasági társaság",
             "Scan - Informatikai osztály",
@@ -1725,7 +1739,6 @@ namespace SKFB_ISZR
             this.ClientSize = new System.Drawing.Size(1400, 800);
             this.Controls.Add(this.step01);
             this.Controls.Add(this.step03PermissionList);
-            this.Controls.Add(this.step02);
             this.Controls.Add(this.step05);
             this.Controls.Add(this.step04PrinterList);
             this.Controls.Add(this.step04Question);
@@ -1748,6 +1761,7 @@ namespace SKFB_ISZR
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.mainMenu);
             this.Controls.Add(this.defaultPermissionsList);
+            this.Controls.Add(this.step02);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WindowsPermissions";

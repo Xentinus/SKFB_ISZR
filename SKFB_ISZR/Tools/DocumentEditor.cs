@@ -64,11 +64,6 @@ namespace SKFB_ISZR.Tools
         // Kijelölt ügyintéző neve
         public static string fullName = string.Empty;
 
-        // Javasló osztályvezető neve és osztályának neve
-        public static string classLeaderName = string.Empty;
-
-        public static string classLeaderRole = string.Empty;
-
         // Megkeresi az összes hasonló értéket majd kicseréli az új értékre
         private static void FindAndReplaceAllShortItem(Application wordApp, object findMe, object replaceMe)
         {
@@ -153,10 +148,6 @@ namespace SKFB_ISZR.Tools
             FindAndReplaceAllShortItem(wordApp, "<office>", office);
             FindAndReplaceAllShortItem(wordApp, "<ntg>", ntg);
             FindAndReplaceAllShortItem(wordApp, "<fullName>", SignatureEditor.GetUserRankSignature(fullName)); // Felhasználó neve
-
-            SignatureEditor.GetClassLeaderSignature(specialty);
-            FindAndReplaceAllShortItem(wordApp, "<classLeader>", classLeaderName); // Osztályvezető neve
-            FindAndReplaceAllShortItem(wordApp, "<classLeaderRole>", classLeaderRole); // Osztályvezető osztálya
 
             // Teljesen alap FIX értékek
 
