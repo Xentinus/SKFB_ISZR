@@ -6,8 +6,10 @@
 
 # Informatikai Szolgálati jegy Rendszer - Első verzió
 
-*Az SKFB-ISZR egy szolgálati jegyet igénylő rendszer legelső verziója amely csak Sopronkőhidán üzemelt mint próba.*
+Az `ISZR` első verziója amely C# nyelven írodott és Windows From alapokon működött.
 
-A rendszer azóta **átváltott országos szintűre, új külsővel, új funkciókkal amelyek egyszerübbé tették a program használatát.**
+Ebben a verzióban még nem voltak külön felhasználói profilok illetve adatbázisok a háttérben (ennek az oka, hogy nem voltak meg a technikai feltételek egy adatbázis létrehozásához a program megszületésekor)
 
-`ISZR` néven érhető el a legfrisebb verzió, amely szintén megtalálható a GitHub Repok között.
+Minden felhasználónak manuálisan be kellett írni minden elérhetőséget amely a felhasználóval kapcsolatos. Majd a rendszer a háttérben megnyította a Word-öt és behelyesítette az adott helyekre a bekért adatokat.
+
+Az első verzió körülbelül 1,5 évig üzemelt majd át állt az új verziójú rendszerre.
